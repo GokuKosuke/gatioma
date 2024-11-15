@@ -233,6 +233,15 @@
   }
 
   .clicked.btn .bb:nth-child(1) {
+  
+  }
+  .clicked.btn .bb:nth-child(2) {
+ 
+  }
+  .clicked.btn .bb:nth-child(3) {
+
+  }
+  /* .clicked.btn .bb:nth-child(1) {
     top: -8px;
     transform: translateY(20px) translateX(-15px) rotate(45deg);
     transition: .3s ease;
@@ -245,7 +254,7 @@
   .clicked.btn .bb:nth-child(3) {
     top: 32px;
     transform: translateY(-20px) translateX(-15px) rotate(-45deg);
-  }
+  } */
 
   .mask {
     width: 100%;

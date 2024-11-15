@@ -20,7 +20,7 @@ function Page1() {
           <div className="GATIOMAE">OMAEGATI</div>
         </div>
         <div className="videoWrapper">
-            <video src="/sti.MP4" className='sti' autoPlay playsinline muted loop></video>
+            <video src="/sti.MP4" className='sti' autoPlay playsInline muted loop></video>
                 <div className="videomask"></div>
         </div>
         <div className="chat">
