@@ -194,7 +194,7 @@
   }
 
   .barContainer .bar ul li:nth-child(5){
-    top: 60vh;
+    top: 50vh;
   }
 
   .clicked.barContainer {
