@@ -204,13 +204,15 @@
 
   .btn {
     width: 40px;
-    height: 25px;
+    height: 40px;
     position: fixed;
     top: 17px;
     /* right: 12px; */
     left: 40px;
     z-index: 999;
   }
+
+
 
   .btn .bb {
     width: 40px;
@@ -234,15 +236,27 @@
   }
 
   .clicked.btn .bb:nth-child(1) {
-    transform: translateY(10px) translateX(-20px) rotate(45deg);
+    transform: translateY(12px) translateX(-20px) rotate(45deg);
   }
   .clicked.btn .bb:nth-child(2) {
     transform: translateX(-100px);
   }
   .clicked.btn .bb:nth-child(3) {
-    transform: translateY(-20px)  translateX(-20px)  rotate(-45deg);
+    transform: translateY(-18px)  translateX(-20px)  rotate(-45deg);
   }
 
+  .settingsClicked.btn .bb:nth-child(1) {
+    transform: translateY(20px) translateX(-26px) rotate(35deg);
+    width: 29px;
+  }
+  .settingsClicked.btn .bb:nth-child(2) {
+    transform: translateX(-19px) translateY(-2px);
+  }
+  .settingsClicked.btn .bb:nth-child(3) {
+    transform: translateY(-24px)  translateX(-26px)  rotate(-35deg);
+    width: 29px;
+  }
+  
   .mask {
     width: 100%;
     height: 100vh;
@@ -459,3 +473,50 @@
   background-color: #93a1b047;
   backdrop-filter: blur(10px);
 }
+
+.settingsContainer {
+  left: -300px;
+}
+
+.clickedSettings.settingsContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #6c6c6c51;
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.329);
+  box-shadow: 10px 0 60px rgba(0, 0, 0, 0.627);
+  z-index: 21;
+  transition: .4s ease;
+}
+
+.clickedSettings.settingsContainer ul li a{
+  z-index: 999;
+  position: absolute;
+  color: white;
+  
+}
+
+
+.clickedSettings.settingsContent {
+  width: 90%;
+  height: 100vh;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+
+}
+
+.clickedSettings.settingsArrow {
+  color: white;
+  font-size: 3.7rem;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  position: absolute;
+}
+
