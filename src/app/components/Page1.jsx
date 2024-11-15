@@ -24,7 +24,7 @@ function Page1() {
                 <div className="videomask"></div>
         </div>
         <div className="chat">
-          <ChatIcon sx={{fontSize:60, color: "white"}} />
+          <a href="https://main.d32g3bpdwdinnr.amplifyapp.com/#"><ChatIcon sx={{fontSize:60, color: "white"}} /></a>
         </div>
         <div className="toTop">
           <div className="arrow" onClick={scrollToTop}>↑</div>
