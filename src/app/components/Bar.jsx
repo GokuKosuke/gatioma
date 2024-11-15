@@ -2,6 +2,10 @@
 
 import React, { useState } from 'react'
 import ChildComponent from './Body';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import SettingsIcon from '@mui/icons-material/Settings';
+import { IconButton } from '@mui/material';
 
 function Bar({ children }) {
   // リンクごとのホバー状態を管理する配列をuseStateで初期化
@@ -21,11 +25,11 @@ function Bar({ children }) {
   }
 
   const links = [
-    { label: 'Profile', href: '#' },
-    { label: 'makeshif', href: '#' },
-    { label: 'makeshi', href: '#' },
-    { label: 'makeshift', href: '#' },
-    { label: 'Settings', href: '#' },
+    { label: 'Profile', href: '#', icon: <PersonIcon /> },
+    { label: 'makeshif', href: '#', },
+    { label: 'makeshi', href: '#',  },
+    { label: 'makeshift', href: '#', icon: <HomeIcon sx={{fontSize: 26}}/> },
+    { label: 'Settings', href: '#', icon: <SettingsIcon /> },
   ];
 
   return (
@@ -46,7 +50,12 @@ function Bar({ children }) {
                         onMouseEnter={() => handleMouseEnter(index)}  // ホバー開始時にインデックスを渡す
                         onMouseLeave={handleMouseLeave}                // ホバー終了時にリセット
                         >
-                        {link.label}
+                        <div className="icons">
+                          <IconButton sx={{color: "white"}}>
+                            {link.icon}
+                          </IconButton>
+                          {link.label}
+                        </div>
                     </a>
                     {/* ホバーしているリンクにのみhoveredクラスを付与 */}
                     <div className={`underbar ${hoveredIndex === index ? "hovered" : ""}`}></div>
