@@ -158,12 +158,13 @@
     position: fixed;
     width: 40%;
     height: 100vh;
-    z-index: 10;
+    z-index: 21;
     border-bottom: 1px solid #efefef9b;
     background: #6c6c6c51;
     backdrop-filter: blur(10px);
     transition: .4s ease;
     border-right: 1px solid rgba(255, 255, 255, 0.329);
+    box-shadow: 10px 0 60px rgba(0, 0, 0, 0.627);
   }
   
   .barContainer .bar {
@@ -245,7 +246,7 @@
   .mask {
     width: 100%;
     height: 100vh;
-    z-index: 9;
+    z-index: 20;
     position: fixed;
     top: 0;
     left: 0;
@@ -263,7 +264,7 @@
     height: 100px;
     background-color: rgba(0, 0, 0, 0.878);
     position: absolute;
-    z-index: 7;
+    z-index: 11;
     border-bottom: 1px solid #c1c1c139;
     position: fixed;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.412);
@@ -276,7 +277,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 8;
+    z-index: 15;
   }
   .GATIOMAE {
     color: white;
@@ -301,17 +302,48 @@
 
 /*page1*/
 
+
 .topbar .fig {
-  z-index: 10;
+  z-index: 999;
   position: absolute;
   top: 0;
   right: 0;
   border-radius: 50%;
   object-fit: cover;
   margin: 13px;
-  z-index: 10;
 }
 
+.topbar .figClicked.fig {
+  animation: fig 8s ease;
+}
+
+@keyframes fig {
+  0% {
+    transform: translateX(0) rotate(-9deg);
+  }
+  10% {
+    transform: translateX(-50px)  rotate(9deg);
+  }
+  20% {
+    transform: translateX(-100px) rotate(-9deg);
+  }
+  30% {
+    transform: translateX(-150px)  rotate(9deg);
+  }
+  40% {
+    transform: translateX(-200px) rotate(-9deg);
+  }
+  50% {
+    transform: translateX(-250px)  rotate(9deg);
+  }
+  85% {
+    transform: translateX(50px) rotate(-9deg);
+  }
+
+  100% {
+    transform: translateX(-2000px);
+  }
+}
 
 
 .sti {
@@ -362,6 +394,7 @@
   align-items: center;
   background-color: #ffffff24;
   backdrop-filter: blur(10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.384);
 }
 
 .arrow {
@@ -377,8 +410,52 @@
   left: 20px;
   z-index: 10;
   transition: .3s ease;
+
 }
 
 .chat:hover {
   transform: scale(1.1) rotate(3deg);
+}
+
+.OmaeProfile {
+  top: 1000px;
+  position: fixed;
+  opacity: 0;
+}
+
+.profileClicked.OmaeProfile {
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background: rgb(154,165,255);
+  background: linear-gradient(187deg, rgba(154,165,255,1) 0%, rgba(0,209,255,1) 29%, rgba(255,255,255,1) 100%);
+  position: fixed;
+  top: 0;
+  transition: .5s ease;
+  opacity: 1;
+}
+
+.backArrow {
+  color: white;
+  font-size: 3.5rem;
+}
+
+.profileContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.profileContent {
+  width: 300px;
+  height: 500px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #93a1b047;
+  backdrop-filter: blur(10px);
 }
