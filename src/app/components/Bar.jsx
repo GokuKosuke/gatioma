@@ -44,9 +44,9 @@ function Bar({ children }) {
 
   const links = [
     { label: "Profile", href: "#", icon: <PersonIcon />, onClick: handleClickProfile },
-    { label: "makeshif", href: "#" },
-    { label: "makeshi", href: "#" },
-    { label: "makeshift", href: "#", icon: <HomeIcon sx={{ fontSize: 26 }} /> },
+    { label: "Section1", href: "#" },
+    { label: "Section2", href: "#" },
+    { label: "Section3", href: "#", icon: <HomeIcon sx={{ fontSize: 26 }} /> },
     { label: "Settings", href: "#", icon: <SettingsIcon />,onClick: handleClickSettings },
   ];
 

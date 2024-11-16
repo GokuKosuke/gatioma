@@ -187,10 +187,11 @@
   .barContainer .bar ul li a {
     display: block;
     transition: .3s ease;
+    color: rgba(255, 255, 255, 0.663);
   }
 
   .barContainer .bar ul li a:hover {
-    color: #cfc7c7;
+    color: #949494;
     transform: scale(1.1);
   }
 
@@ -211,8 +212,6 @@
     left: 40px;
     z-index: 999;
   }
-
-
 
   .btn .bb {
     width: 40px;
@@ -284,6 +283,26 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.412);
   }
 
+  .PavedTopbar.topbar {
+    animation: pave 8s ease;
+    transition: 2s ease;
+  }
+
+  @keyframes pave {
+
+    0% {
+      background-color: rgba(0, 0, 0, 0.878);
+    }
+    10% {
+      background-color: #3e3e3e;
+    }
+    90% {
+      background-color: #3e3e3e;
+    }
+    100% {
+      background-color: #000;
+    }
+  }
   .title {
     width: 100%;
     height: 100px;
@@ -300,11 +319,37 @@
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .PavedTopbar.GATIOMAE {
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  .text {
+    transition: opacity .2s ease;
+    opacity: 0;
+    position: absolute;
+    text-wrap: nowrap;
+  }
+
+  .text2 {
+    letter-spacing: 20px;
+    font-size: 100px;
+  }
+
+  .hidden.text {
+    opacity: 0;
+  }
+  .visible.text {
+    opacity: 1;
   }
 
   .icons {
     display: flex;
-
   }
 
 
@@ -491,13 +536,41 @@
   box-shadow: 10px 0 60px rgba(0, 0, 0, 0.627);
   z-index: 21;
   transition: .4s ease;
+  
 }
 
-.clickedSettings.settingsContainer ul li a{
-  z-index: 999;
+.settingsContainer .settingsContent{
   position: absolute;
-  color: white;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.settingsContainer .settingsContent ul li {
+  display: none;
+}
+
+.clickedSettings.settingsContainer .settingsContent ul {
+
+
+}
+
+.clickedSettings.settingsContainer .settingsContent ul li {
+  display: block;
+  transition: .3s ease;
+}
+
+.clickedSettings.settingsContainer .settingsContent ul li a{
+  z-index: 999;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.663);
+  display: block;
+  text-decoration: none;
+  font-size: 4rem;
+}
+.clickedSettings.settingsContainer .settingsContent ul li:hover {
+  color: #cecece;
+  transform: scale(1.1);
 }
 
 
@@ -520,3 +593,26 @@
   position: absolute;
 }
 
+.underbarSettings {
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.627);
+  transition: .3s ease;
+}
+
+.barClicked.underbarSettings {
+  width: 100%;
+}
+
+
+
+/*----------*/
+
+.colorContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}

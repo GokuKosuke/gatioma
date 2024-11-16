@@ -15,14 +15,20 @@ function Page1() {
   }
 
   const handleClick = () => {
-    setClicked(!clicked)
+      setClicked(!clicked)
+      setTimeout(() => {
+        setClicked(false)
+      }, 7200)
   }
   return (
     <div>
-        <div className="topbar">
+        <div className={`topbar ${clicked ? "PavedTopbar" : ""}`}>
             <Image src="/fig.png" width={70} height={70} alt="fig" className={`fig ${clicked ? "figClicked": ""}`} onClick={handleClick}></Image>
           <div className="title">
-            <div className="GATIOMAE">OMAEGATI</div>
+            <div className="GATIOMAE">
+              <span className={`text ${clicked ? "hidden" : "visible"}`}>OMAEGATI</span>
+              <span className={`text text2 ${clicked ? "visible" : "hidden"}`}>--------</span>
+            </div>
           </div>
         </div>
         <div className="videoWrapper">
