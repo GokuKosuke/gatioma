@@ -26,7 +26,7 @@ function Page1() {
             <Image src="/fig.png" width={70} height={70} alt="fig" className={`fig ${clicked ? "figClicked": ""}`} onClick={handleClick}></Image>
           <div className="title">
             <div className="GATIOMAE">
-              <span className={`text ${clicked ? "hidden" : "visible"}`}>OMAEGATI</span>
+              <span className={`text text1 ${clicked ? "hidden" : "visible"}`}>OMAEGATI</span>
               <span className={`text text2 ${clicked ? "visible" : "hidden"}`}>--------</span>
             </div>
           </div>
