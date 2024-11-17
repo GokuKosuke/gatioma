@@ -384,21 +384,24 @@
 
 
 .topbar .blue {
-  z-index: 999;
-  top: -130px;
   right: 100px;
-  opacity: 0;
+  top: -120px;
 }
+
+.topbar .black  {
+  right: -150px;
+  top: -120px;
+}
+
 .topbar .white {
-  z-index: 998;
+  right: 100px;
   top: -120px;
-  right: -0px;
-  opacity: 0;
 }
-.topbar .black {
+
+.car {
+  top: 0;
+  position: absolute;
   z-index: 998;
-  top: -120px;
-  right: 220px;
   opacity: 0;
 }
 
@@ -406,7 +409,7 @@
   animation: fig 8s ease;
 }
 
-.topbar .fig2Clicked.fig {
+.topbar .fig2Clicked.car {
   animation: fig2 8s ease;
 }
 
