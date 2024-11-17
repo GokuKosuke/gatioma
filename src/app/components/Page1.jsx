@@ -25,9 +25,9 @@ function Page1() {
 
   const getRandomImage = () => {
     const images = [
-      { src: "/blue.PNG", width: 250, height: 250, alt: "blue", className: "car blue"},
+      { src: "/blue.png", width: 250, height: 250, alt: "blue", className: "car blue"},
       { src: "/white.png", width: 200, height: 200, alt: "white", className: "car white"},
-      { src: "/black.PNG", width: 200, height: 200, alt: "black", className: "car black"}
+      { src: "/black.png", width: 200, height: 200, alt: "black", className: "car black"}
     ];
     const randomIndex = Math.floor(Math.random() * images.length); // 0〜2のランダムな整数を生成
     return images[randomIndex];
