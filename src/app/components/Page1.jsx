@@ -24,6 +24,9 @@ function Page1() {
     <div>
         <div className={`topbar ${clicked ? "PavedTopbar" : ""}`}>
             <Image src="/fig.png" width={70} height={70} alt="fig" className={`fig ${clicked ? "figClicked": ""}`} onClick={handleClick}></Image>
+            <Image src="/blue.PNG" width={250} height={250} alt="fig" className={`fig blue ${clicked ? "fig2Clicked": ""}`} onClick={handleClick}></Image>
+            <Image src="/white.png" width={200} height={200} alt="fig" className={`fig white ${clicked ? "fig2Clicked": ""}`} onClick={handleClick}></Image>
+            <Image src="/black.PNG" width={200} height={200} alt="fig" className={`fig black ${clicked ? "fig2Clicked": ""}`} onClick={handleClick}></Image>
           <div className="title">
             <div className="GATIOMAE">
               <span className={`text text1 ${clicked ? "hidden" : "visible"}`}>OMAEGATI</span>

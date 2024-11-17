@@ -314,7 +314,7 @@
   }
   .GATIOMAE {
     color: white;
-
+    position: absolute;
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -338,6 +338,7 @@
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0 auto;
   }
 
   .text2 {
@@ -381,8 +382,32 @@
   margin: 13px;
 }
 
+
+.topbar .blue {
+  z-index: 999;
+  top: -130px;
+  right: 100px;
+  opacity: 0;
+}
+.topbar .white {
+  z-index: 998;
+  top: -120px;
+  right: -0px;
+  opacity: 0;
+}
+.topbar .black {
+  z-index: 998;
+  top: -120px;
+  right: 220px;
+  opacity: 0;
+}
+
 .topbar .figClicked.fig {
   animation: fig 8s ease;
+}
+
+.topbar .fig2Clicked.fig {
+  animation: fig2 8s ease;
 }
 
 @keyframes fig {
@@ -390,24 +415,41 @@
     transform: translateX(0) rotate(-9deg);
   }
   10% {
-    transform: translateX(-50px)  rotate(9deg);
+    transform: translateX(-30px)  rotate(9deg);
   }
   20% {
-    transform: translateX(-100px) rotate(-9deg);
+    transform: translateX(-60px) rotate(-9deg);
   }
   30% {
-    transform: translateX(-150px)  rotate(9deg);
+    transform: translateX(-90px)  rotate(9deg);
   }
   40% {
-    transform: translateX(-200px) rotate(-9deg);
+    transform: translateX(-120px) rotate(-9deg);
   }
   50% {
-    transform: translateX(-250px)  rotate(9deg);
+    transform: translateX(-150px)  rotate(9deg);
   }
-  85% {
+  75% {
     transform: translateX(50px) rotate(-9deg);
   }
 
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes fig2 {
+  0% {
+    transform: translate(0);
+  }
+
+  70% {
+    transform: translateX(-100px);
+  }
+  75% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
   100% {
     transform: translateX(-2000px);
   }
@@ -419,7 +461,10 @@
   height: 400px;
   object-fit: cover;
   z-index: 0;
+  top: -100px;
+  position: relative;
 }
+
 
 .videomask {
   width: 100%;
