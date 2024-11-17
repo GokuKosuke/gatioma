@@ -25,9 +25,9 @@ function Page1() {
 
   const getRandomImage = () => {
     const images = [
-      { src: "/blue.PNG", width: 250, height: 250, alt: "blue", className: "car blue", loading: "eager"},
-      { src: "/white.png", width: 200, height: 200, alt: "white", className: "car white", loading: "eager" },
-      { src: "/black.PNG", width: 200, height: 200, alt: "black", className: "car black", loading: "eager"}
+      { src: "/blue.PNG", width: 250, height: 250, alt: "blue", className: "car blue"},
+      { src: "/white.png", width: 200, height: 200, alt: "white", className: "car white"},
+      { src: "/black.PNG", width: 200, height: 200, alt: "black", className: "car black"}
     ];
     const randomIndex = Math.floor(Math.random() * images.length); // 0〜2のランダムな整数を生成
     return images[randomIndex];
@@ -49,7 +49,6 @@ function Page1() {
               height={randomImage.height}
               alt={randomImage.alt}
               className={`${randomImage.className} ${clicked ? "fig2Clicked" : ""}`} // clicked 状態によってクラスを変更
-              onClick={handleClick} // クリック時に状態を変更
             />
              )}
           <div className="title">
