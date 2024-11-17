@@ -25,9 +25,9 @@ function Page1() {
 
   const getRandomImage = () => {
     const images = [
-      { src: "/blue.PNG", width: 250, height: 250, alt: "blue", className: "car blue" },
-      { src: "/white.png", width: 200, height: 200, alt: "white", className: "car white" },
-      { src: "/black.PNG", width: 200, height: 200, alt: "black", className: "car black" }
+      { src: "/blue.PNG", width: 250, height: 250, alt: "blue", className: "car blue", loading: "eager"},
+      { src: "/white.png", width: 200, height: 200, alt: "white", className: "car white", loading: "eager" },
+      { src: "/black.PNG", width: 200, height: 200, alt: "black", className: "car black", loading: "eager"}
     ];
     const randomIndex = Math.floor(Math.random() * images.length); // 0〜2のランダムな整数を生成
     return images[randomIndex];
@@ -43,7 +43,7 @@ function Page1() {
         <div className={`topbar ${clicked ? "PavedTopbar" : ""}`}>
             <Image src="/fig.png" width={70} height={70} alt="fig" className={`fig ${clicked ? "figClicked": ""}`} onClick={handleClick}></Image>
             {randomImage && (
-            <Image
+            <img
               src={randomImage.src}
               width={randomImage.width}
               height={randomImage.height}

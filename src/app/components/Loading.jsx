@@ -17,7 +17,7 @@ function Loading() {
 
   return (
     <div className={`loading ${isVisible ? '' : 'fade-out'}`}>
-        <Image className='loadingomae' src="/loadingomae.PNG" width={400} height={400} alt='loadingomae'></Image>
+        <img className='loadingomae' src="/loadingomae.PNG" width={400} height={400} alt='loadingomae'></img>
         <div className="texts">
             <div className="loadingtext">Loading</div>
             <div className="tenten1 tenten">.</div>
