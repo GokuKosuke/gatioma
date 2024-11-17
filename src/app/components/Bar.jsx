@@ -15,6 +15,7 @@ function Bar({ children }) {
   const [clicked, setClicked] = useState(false);
   const [profileClicked, setProfileClicked] = useState(false);
   const [settingsClicked, setSettingsClicked] = useState(false);
+  const [clickedColor, setClickedColor] = useState(false); // clickedColor を追加
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -25,12 +26,12 @@ function Bar({ children }) {
   };
 
   const handleClick = (event) => {
-    const c1 = event.currentTarget.classList.contains("clicked")
-    const c2 = event.currentTarget.classList.contains("settingsClicked")
+    const c1 = event.currentTarget.classList.contains("clicked");
+    const c2 = event.currentTarget.classList.contains("settingsClicked");
     setClicked(!clicked);
-  
-    if(c1 && c2) {
-      setSettingsClicked(false)
+
+    if (c1 && c2) {
+      setSettingsClicked(false);
       setClicked(true);
     }
   };
@@ -47,13 +48,13 @@ function Bar({ children }) {
     { label: "Section1", href: "#" },
     { label: "Section2", href: "#" },
     { label: "Section3", href: "#", icon: <HomeIcon sx={{ fontSize: 26 }} /> },
-    { label: "Settings", href: "#", icon: <SettingsIcon />,onClick: handleClickSettings },
+    { label: "Settings", href: "#", icon: <SettingsIcon />, onClick: handleClickSettings },
   ];
 
   return (
     <>
       <ChildComponent>
-        <div className={`btn ${clicked ? "clicked" : ""} ${settingsClicked ? "settingsClicked" : ""}`} onClick={handleClick}>
+        <div className={`btn ${clicked ? "clicked" : ""} ${settingsClicked ? "settingsClicked" : ""} ${clickedColor ? "clickedColor" : ""}`} onClick={handleClick}>
           <div className="btnbar1 bb"></div>
           <div className="btnbar2 bb"></div>
           <div className="btnbar3 bb"></div>
@@ -67,7 +68,7 @@ function Bar({ children }) {
                     href={link.href}
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
-                    onClick={link.onClick} // 各リンクのonClickを設定
+                    onClick={link.onClick}
                   >
                     <div className="icons">
                       <IconButton sx={{ color: "white" }}>{link.icon}</IconButton>
@@ -83,11 +84,17 @@ function Bar({ children }) {
         <div className={`mask ${clicked ? "" : "clicked"}`} onClick={handleClick}></div>
         <div className={`OmaeProfile ${profileClicked ? "profileClicked" : ""}`}>
           <div className="backBtn" onClick={handleClickProfile}>
-            <ArrowBackIcon  className="backArrow"/>
+            <ArrowBackIcon className="backArrow" />
           </div>
           <Profile />
         </div>
-          <Settings settingsClicked={settingsClicked} setSettingsClicked={setSettingsClicked}/>
+        {/* clickedColor と setClickedColor を Settings に渡す */}
+        <Settings 
+          settingsClicked={settingsClicked} 
+          setSettingsClicked={setSettingsClicked} 
+          clickedColor={clickedColor} 
+          setClickedColor={setClickedColor} 
+        />
       </ChildComponent>
     </>
   );
