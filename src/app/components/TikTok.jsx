@@ -1,78 +1,52 @@
-"use client"
+"use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import gsap from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-function TikTok({ clickedTikTok, setClickedTikTok}) {
+function TikTok({ clickedTikTok, setClickedTikTok }) {
+  useEffect(() => {
+    // ScrollTriggerプラグインの登録
+    gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
-        // ScrollTriggerプラグインの登録
-        gsap.registerPlugin(ScrollTrigger);
-    
- // アニメーションの設定
- gsap.to(".img1", {  // アニメーション対象を .img1 に変更
-    scrollTrigger: {
-      trigger: ".img1",   // トリガーは img1 に設定
-      start: "100% 100%",    // スクロール開始位置
-      end: "bottom 50%",      // スクロール終了位置
-      scrub: 1,            // スクロールに合わせてアニメーション進行
-      // markers: true        // デバッグ用のマーカーを表示
-    },
-    y: -1000,              // X軸方向に移動
-  });
- gsap.to(".img2", {  // アニメーション対象を .img1 に変更
-    scrollTrigger: {
-      trigger: ".img2",   // トリガーは img1 に設定
-      start: "100% 100%",    // スクロール開始位置
-      end: "bottom 50%",      // スクロール終了位置
-      scrub: 1,            // スクロールに合わせてアニメーション進行
-      markers: true        // デバッグ用のマーカーを表示
-    },
-    y: -800,              // X軸方向に移動
-  });
- gsap.to(".img3", {  // アニメーション対象を .img1 に変更
-    scrollTrigger: {
-      trigger: ".img3",   // トリガーは img1 に設定
-      start: "100% 100%",    // スクロール開始位置
-      end: "bottom 50%",      // スクロール終了位置
-      scrub: 1,            // スクロールに合わせてアニメーション進行
-      markers: true        // デバッグ用のマーカーを表示
-    },
-    y: -600,              // X軸方向に移動
-  });
- gsap.to(".img4", {  // アニメーション対象を .img1 に変更
-    scrollTrigger: {
-      trigger: ".img4",   // トリガーは img1 に設定
-      start: "100% 100%",    // スクロール開始位置
-      end: "bottom 50%",      // スクロール終了位置
-      scrub: 1,            // スクロールに合わせてアニメーション進行
-      markers: true        // デバッグ用のマーカーを表示
-    },
-    y: -400,              // X軸方向に移動
-  });
-}, []);
+    // 各画像に対してアニメーション設定
+    ["img1", "img2", "img3", "img4"].forEach((className, index) => {
+      gsap.to(`.${className}`, {
+        scrollTrigger: {
+          trigger: `.${className}`, // トリガーをクラスごとに設定
+          start: "-100% center", // スクロール開始位置
+          end: "bottom center", // スクロール終了位置
+          scrub: 1, // スクロールに合わせて進行
+          markers: true, // デバッグ用マーカーを表示
+        },
+        y: -(1000 - index * 200), // Y軸方向の移動距離を調整
+      });
+    });
+  }, []);
 
+  const handleClickTikTok2 = () => {
+    setClickedTikTok(!clickedTikTok)
+  }
   return (
     <div className={`tiktokpage ${clickedTikTok ? "activetiktok" : ""}`}>
+      <div className="backArrow23" onClick={handleClickTikTok2}>
+        <ArrowBackIcon className="backArrow2"/>
+        <ArrowBackIcon className="backArrow3"/>
+      </div>
       <div className="section1">
         <div className="fuyofuyo">
-          <div className="img1 img">
-            <img src="/black100.PNG" alt=""/>  
-          </div>
-          <div className="img2 img">
-            <img src="/black300.PNG" alt="" />
-          </div>
-          <div className="img3 img">
-            <img src="/black500.PNG" alt="" />
-          </div>
-          <div className="img4 img">
-            <img src="/black900.PNG" alt="" />
-          </div>
+          {["black100.PNG", "black300.PNG", "black500.PNG", "black900.PNG"].map(
+            (src, index) => (
+              <div key={index} className={`img${index + 1} img`}>
+                <img src={`/${src}`} alt="" />
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default TikTok
+export default TikTok;
