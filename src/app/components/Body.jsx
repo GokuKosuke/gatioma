@@ -5,9 +5,12 @@ import React from 'react'
 
 function Body({ children }) {
   return (
+    <>
+    <link rel="icon" href="/omaemini.jpg" />
     <div className='body'>
       {children}
     </div>
+    </>
   )
 }
 
