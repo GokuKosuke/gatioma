@@ -10,6 +10,7 @@ import Profile from "./Profile";
 import Settings from "./Settings";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons'; // Ensure this import is correct
+import TikTok from "./TikTok";
 
 function Bar({ children }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -17,6 +18,7 @@ function Bar({ children }) {
   const [profileClicked, setProfileClicked] = useState(false);
   const [settingsClicked, setSettingsClicked] = useState(false);
   const [clickedColor, setClickedColor] = useState(false);
+  const [clickedTikTok, setClickedTikTok] = useState(false);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -45,9 +47,13 @@ function Bar({ children }) {
     setSettingsClicked(!settingsClicked);
   };
 
+  const handleClickTikTok = () => {
+    setClickedTikTok(!clickedTikTok);
+  }
+
   const links = [
     { label: "Profile", href: "#", icon: <PersonIcon />, onClick: handleClickProfile },
-    { label: "TikTok活動", href: "#", icon: <FontAwesomeIcon icon={faTiktok} /> }, // Make sure this is correct
+    { label: "TikTok活動", href: "#", icon: <FontAwesomeIcon icon={faTiktok} />, onClick: handleClickTikTok }, // Make sure this is correct
     { label: "Section2", href: "#" },
     { label: "Section3", href: "#", icon: <HomeIcon sx={{ fontSize: 26 }} /> },
     { label: "Settings", href: "#", icon: <SettingsIcon />, onClick: handleClickSettings },
@@ -96,6 +102,7 @@ function Bar({ children }) {
           clickedColor={clickedColor} 
           setClickedColor={setClickedColor} 
         />
+        <TikTok clickedTikTok={clickedTikTok} setClickedTikTok={setClickedTikTok}/>
       </ChildComponent>
     </>
   );
