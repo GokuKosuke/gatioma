@@ -29,7 +29,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       {
         opacity: 1,   // 初期状態
         x: -2000,
-        y: -2000,
+        y: -1000,
         rotate: -360
       },
       {
@@ -75,7 +75,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       {
         opacity: 0,   // 初期状態
         x: 2000,
-        y: -2000,
+        y: -1000,
         rotate: 360
       },
       {
@@ -194,11 +194,11 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     }
    );
     gsap.fromTo(
-      ".movies > video:nth-child(1)",
+      ".movies > .movies1 > video:nth-child(1)",
       {
         y: -130,
         x: -500,
-        rotate: -65
+        rotate: -95
       },
       {
         // x: 0,
@@ -214,11 +214,11 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     }
    );
     gsap.fromTo(
-      ".movies > video:nth-child(2)",
+      ".movies > .movies1 > video:nth-child(2)",
       {
         y: -130,
         x: 500,
-        rotate: 65
+        rotate: 95
       },
       {
         // x: 0,
@@ -235,11 +235,11 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     }
    );
     gsap.fromTo(
-      ".movies > video:nth-child(3)",
+      ".movies > .movies2 > video:nth-child(1)",
       {
         y: -130,
         x: -500,
-        rotate: -65,
+        rotate: -95,
         delay: .6,
       },
       {
@@ -256,11 +256,11 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     }
    );
     gsap.fromTo(
-      ".movies > video:nth-child(4)",
+      ".movies > .movies2 > video:nth-child(2)",
       {
         y: -130,
         x: 500,
-        rotate: 65,
+        rotate: 95,
         delay: 1,
       },
       {
@@ -316,11 +316,17 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
               <div className="tiktoklife">TikTokLife</div>
             </div>
           </div>
-          <div className="movies">
-            <video src="/tiktoker.MP4"  className="video1" autoPlay playsInline muted loop></video>
-            <video src="/tiktoker1.MP4" autoPlay playsInline muted loop></video>
-            <video src="/tiktoker2.MP4" autoPlay playsInline muted loop></video>
-            <video src="/tiktoker3.MP4" autoPlay playsInline muted loop></video>
+          <div className="moviesCon">
+            <div className="movies">
+              <div className="movies1">
+                <video src="/tiktoker.MP4"  className="video1" autoPlay playsInline muted loop></video>
+                <video src="/tiktoker1.MP4" autoPlay playsInline muted loop></video>
+              </div>
+              <div className="movies2">
+                <video src="/tiktoker2.MP4" autoPlay playsInline muted loop></video>
+                <video src="/tiktoker3.MP4" autoPlay playsInline muted loop></video>
+              </div>
+            </div>
           </div>
         </div>
         <div className="shinsakuCon">
