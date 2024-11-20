@@ -198,7 +198,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       {
         y: -130,
         x: -500,
-        rotate: -45
+        rotate: -65
       },
       {
         // x: 0,
@@ -218,7 +218,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       {
         y: -130,
         x: 500,
-        rotate: 45
+        rotate: 65
       },
       {
         // x: 0,
@@ -239,7 +239,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       {
         y: -130,
         x: -500,
-        rotate: -45,
+        rotate: -65,
         delay: .6,
       },
       {
@@ -260,7 +260,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       {
         y: -130,
         x: 500,
-        rotate: 45,
+        rotate: 65,
         delay: 1,
       },
       {
