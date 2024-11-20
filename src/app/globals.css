@@ -936,7 +936,7 @@
   height: 100vh;
   position: absolute;
   overflow: hidden;
-  top: 800px;
+  top: 650px;
 }
 
 .movies video:nth-child(1) {
@@ -1014,9 +1014,10 @@
   font-size: 60px;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 100%;
   height: 400px;
   left: 0;
+
 }
 
 .omatik {
@@ -1054,5 +1055,25 @@
   left: 100px;
   position: relative;
   /* opacity: .7; */
+  z-index: -1;
+
+}
+
+.tiktoklifeCon {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.tiktoklife {
+  color: white;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  top: 230px;
+  font-size: 4.3rem;
 
 }

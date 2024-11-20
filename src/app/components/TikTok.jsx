@@ -73,7 +73,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     gsap.fromTo(
       ".tikTextomae3",
       {
-        opacity: 1,   // 初期状態
+        opacity: 0,   // 初期状態
         x: 2000,
         y: -2000,
         rotate: 360
@@ -96,7 +96,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     gsap.fromTo(
       ".tikTextomae4",
       {
-        opacity: 1,   // 初期状態
+        opacity: 0,   // 初期状態
         x: 2000,
         y: 2000,
         rotate: 360
@@ -117,6 +117,27 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       }
     );
     gsap.fromTo(
+      ".tiktoklife",
+      {
+        opacity: 0,   // 初期状態
+        y: 400,
+        rotate: 360
+      },
+      {
+        opacity: 1,   // 終了状態
+        y: 0,
+        rotate: 0,
+        duration: 1, // アニメーションの時間（任意）
+  scrollTrigger: {
+    trigger: ".section", // 親要素全体をトリガーに設定
+    start: "top 10%",  // .texts の上端が画面の75%位置に来たら開始
+    end: "bottom 30%", // .texts の下端が画面の25%位置に来たら終了
+    scrub: true,
+    // markers: true
+}
+      }
+    );
+    gsap.fromTo(
       ".omatik",
       {
         opacity: 1,   // 初期状態
@@ -129,7 +150,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     start: "top 0%",  // .texts の上端が画面の75%位置に来たら開始
     end: "bottom 50%", // .texts の下端が画面の25%位置に来たら終了
     scrub: true,
-    markers: true
+    // markers: true
 }
       }
     );
@@ -146,7 +167,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     start: "top 0%",  // .texts の上端が画面の75%位置に来たら開始
     end: "bottom 50%", // .texts の下端が画面の25%位置に来たら終了
     scrub: true,
-    markers: true
+    // markers: true
 }
       }
     );
@@ -154,15 +175,102 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".otoko",
       {
         // x: 200,
-        y: -100
+        y: -30,
+        x: -200,
+        rotate: -40
       },
       {
         // x: 0,
-        y: 700,
+        y: 600,
+        x: 0,
+        rotate: 20,
         scrollTrigger: {
           trigger: ".section", // 親要素全体をトリガーに設定
           start: "top 0%",  // .texts の上端が画面の75%位置に来たら開始
           end: "bottom 50%", // .texts の下端が画面の25%位置に来たら終了
+          scrub: true,
+          // markers: true
+      }
+    }
+   );
+    gsap.fromTo(
+      ".movies > video:nth-child(1)",
+      {
+        y: -130,
+        x: -500,
+        rotate: -45
+      },
+      {
+        // x: 0,
+        y: 0,
+        x: 0,
+        rotate: -20,
+        scrollTrigger: {
+          start: "top -10%",  // .texts の上端が画面の75%位置に来たら開始
+          end: "bottom -10%", // .texts の下端が画面の25%位置に来たら終了
+          scrub: true,
+          markers: true
+      }
+    }
+   );
+    gsap.fromTo(
+      ".movies > video:nth-child(2)",
+      {
+        y: -130,
+        x: 500,
+        rotate: 45
+      },
+      {
+        // x: 0,
+        y: 0,
+        x: 0,
+        rotate: 20,
+        delay: .3,
+        scrollTrigger: {
+          start: "top -20%",  // .texts の上端が画面の75%位置に来たら開始
+          end: "bottom -20%", // .texts の下端が画面の25%位置に来たら終了
+          scrub: true,
+          markers: true
+      }
+    }
+   );
+    gsap.fromTo(
+      ".movies > video:nth-child(3)",
+      {
+        y: -130,
+        x: -500,
+        rotate: -45,
+        delay: .6,
+      },
+      {
+        // x: 0,
+        y: 0,
+        x: 0,
+        rotate: -20,
+        scrollTrigger: {
+          start: "top -30%",  // .texts の上端が画面の75%位置に来たら開始
+          end: "bottom -30%", // .texts の下端が画面の25%位置に来たら終了
+          scrub: true,
+          markers: true
+      }
+    }
+   );
+    gsap.fromTo(
+      ".movies > video:nth-child(4)",
+      {
+        y: -130,
+        x: 500,
+        rotate: 45,
+        delay: 1,
+      },
+      {
+        // x: 0,
+        y: 0,
+        x: 0,
+        rotate: 20,
+        scrollTrigger: {
+          start: "top -40%",  // .texts の上端が画面の75%位置に来たら開始
+          end: "bottom -40%", // .texts の下端が画面の25%位置に来たら終了
           scrub: true,
           markers: true
       }
@@ -204,13 +312,20 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
               <div className="tikTextomae3 tikText">颯</div>
               <div className="tikTextomae4 tikText">士</div>
             </div>
+            <div className="tiktoklifeCon">
+              <div className="tiktoklife">TikTokLife</div>
+            </div>
           </div>
           <div className="movies">
-            <video src="/tiktoker.MP4" autoPlay playsInline muted loop></video>
+            <video src="/tiktoker.MP4"  className="video1" autoPlay playsInline muted loop></video>
             <video src="/tiktoker1.MP4" autoPlay playsInline muted loop></video>
             <video src="/tiktoker2.MP4" autoPlay playsInline muted loop></video>
             <video src="/tiktoker3.MP4" autoPlay playsInline muted loop></video>
           </div>
+        </div>
+        <div className="shinsakuCon">
+          <div className="shinsaku">新作を乞うご期待!</div>
+          <div className="Coming">Coming soon...</div>
         </div>
       </div>
     </div>
