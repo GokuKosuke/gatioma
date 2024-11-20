@@ -332,7 +332,7 @@
   }
 
   .text {
-    transition: opacity .2s ease;
+    transition: .3s ease;
     opacity: 0;
     position: absolute;
     text-wrap: nowrap;
@@ -516,6 +516,7 @@
   background-color: #ffffff24;
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.384);
+  z-index: 999;
 }
 
 .arrow {
@@ -1096,6 +1097,7 @@
   position: relative;
   top: 230px;
   font-size: 4.3rem;
+  
 }
 
 .tiktoklife1 {
@@ -1139,11 +1141,20 @@
 .page1Content {
   height: 100vh;
   /* background-color: red; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   z-index: 9;
   width: 100%;
   position: absolute;
-  top: 200px;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.heatsOmaeCon {
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -1153,9 +1164,10 @@
   width: 400px;
   /* overflow: hidden; */
   position: absolute;
-  top: 500px;
+  top: 600px;
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
+  
 }
 
 .heartsOmae img {
@@ -1177,11 +1189,12 @@
 }
 
 .pinkBack {
-  min-height: 400vh;
+  min-height: 200vh;
   width: 100%;
   top: -100px;
   position: absolute;
   z-index: -9;
+  
 }
 
 .pink {
@@ -1193,8 +1206,13 @@
 
 
 .changedPink.topbar {
-  background-color: #8f2b83;
+  background-color: #8f2b83f3;
   box-shadow: 0 10px 20px #501242;
+  backdrop-filter: blur(5px);
+}
+
+.changedPink.text {
+  color: #f6c7ff;
 }
 
 .pink {
@@ -1203,4 +1221,59 @@
   background-color: #ffa7ef;
   position: absolute;
   opacity: 1;
+}
+
+
+.omae20 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.omae20 img:nth-child(1) {
+  /* z-index: 999; */
+  position: relative;
+  width: 200px;
+  height: 400px;
+}
+.omae20 img:nth-child(2)  {
+  /* z-index: 999; */
+  position: relative;
+  width: 150px;
+  height: 300px;
+  top: 50px;
+}
+
+.hapiba {
+  /* border: 1px solid red; */
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.hapibaTexts div {
+  color: rgb(206, 63, 63);
+  font-size: 3rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: .3s ease;
+}
+
+.hapibaTexts div:nth-child(1) {
+  font-size: 4rem;
+  top: 50px;
+
+}
+.hapibaTexts div:nth-child(3) {
+  top: -50px;
+
+
+}
+.hapibaTexts div:nth-child(4) {
+  top: -50px;
 }

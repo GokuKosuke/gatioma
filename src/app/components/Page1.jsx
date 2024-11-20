@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import ChatIcon from '@mui/icons-material/Chat';
-import Page1Content from './Page1Content';
+import Page1Content from './Hapiba';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Hapiba from './Hapiba';
 
 
 function Page1() {
@@ -60,7 +61,7 @@ function Page1() {
     },
     {
       opacity: 1,
-      x: 62,
+      x: 52,
       y: 0,
       rotate: 60,
       scrollTrigger: {
@@ -79,7 +80,7 @@ function Page1() {
     },
     {
       opacity: 1,
-      x: -62,
+      x: -52,
       y: 0,
       rotate: -60,
       scrollTrigger: {
@@ -95,13 +96,12 @@ function Page1() {
     },
     {
       opacity: 1,
-      height: 100,
       scrollTrigger: {
         trigger: ".heartsOmae",
         start: "top 60%",
         end: "top 85%",
-        scrub: 1,
-        markers: true,
+        scrub: 2,
+        // markers: true,
         onEnter: () => setChangePink(true),
         onLeaveBack: () => {setTimeout(() => setChangePink(false), 300)}
       }
@@ -130,7 +130,7 @@ function Page1() {
         )}
         <div className="title">
           <div className="GATIOMAE">
-            <span className={`text text1 ${clicked ? "hidden" : "visible"}`}>OMAEGATI</span>
+            <span className={`text text1 ${clicked ? "hidden" : "visible"}  ${changePink ? "changedPink" : ""}`}>OMAEGATI</span>
             <span className={`text text2 ${clicked ? "visible" : "hidden"}`}>--------</span>
           </div>
         </div>
@@ -157,16 +157,19 @@ function Page1() {
             ))}
           </ul>
         </div>
-        <div className="page1Content"> 
-      <div className="heartsOmae">
-        <img src="/peaceomae.PNG" alt="" />
-        <img src="/loveomae.PNG" alt="" />
-        {/* <img src="" alt="" /> */}
-      </div>
-        <div className="pinkBack">
-          <div className="pink"></div>
+      <div className="page1Content">
+        <div className="heatsOmaeCon">
+            <div className="heartsOmae">
+              <img src="/peaceomae.PNG" alt="" />
+              <img src="/loveomae.PNG" alt="" />
+              {/* <img src="" alt="" /> */}
+            </div>
         </div>
-    </div>
+            <div className="pinkBack">
+              <div className="pink"></div>
+            </div>
+        <Hapiba />
+      </div>
     </div>
   );
 }
