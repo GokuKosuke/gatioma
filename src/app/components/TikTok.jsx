@@ -15,12 +15,12 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       gsap.to(`.${className}`, {
         scrollTrigger: {
           trigger: `.${className}`, // トリガーをクラスごとに設定
-          start: "-100% center", // スクロール開始位置
+          start: "-110% center", // スクロール開始位置
           end: "bottom 10%", // スクロール終了位置
           scrub: true, // スクロールに合わせて進行
           // markers: true, // デバッグ用マーカーを表示
         },
-        y: -(1000 - index * 200), // Y軸方向の移動距離を調整
+        y: -(1800 - index * 400), // Y軸方向の移動距離を調整
       });
     });
 
@@ -122,7 +122,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
         opacity: 0,   // 初期状態
         y: 400,
         x: -400,
-        rotate: 1080
+        rotate: 800
       },
       {
         opacity: 1,   // 終了状態
