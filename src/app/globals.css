@@ -861,7 +861,7 @@
   width: 100%;
   height: 270vh;
   top: -70%;
-  transition: .3s ease;
+  top: 1000px;
 }
 
 .activetiktok.tiktokpage {
@@ -871,6 +871,8 @@
   z-index: 999;
   overflow: hidden;
   visibility: visible;
+  top: -450px;
+  transition: .3s ease;
 }
 
 .fuyofuyo {
@@ -940,7 +942,7 @@
   position: relative;
   overflow: hidden;
   top: 100px;
-  z-index: 999;
+  z-index: 998;
 }
 
 .section1 
@@ -950,7 +952,7 @@
   /* height: 100vh; */
   position: absolute;
   /* overflow: hidden; */
-  top: 600px;
+  top: 550px;
   /* display: flex; */
   justify-content: center;
 }
@@ -1003,7 +1005,7 @@
 }
 
 .texts .tikText {
-  color: white;
+  color: rgb(232, 232, 232);
   font-family: "Sawarabi Mincho", serif;
   font-weight: 1000;
   font-style: normal;
@@ -1039,7 +1041,7 @@
 }
 
 .omatik {
-  z-index: 800;
+  /* z-index: 800; */
   width: 100%;
   height: 600px;
   position: absolute;
@@ -1068,8 +1070,7 @@
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
-  transform: rotate(20deg);
-  top: -240px;
+  top: 140px;
   left: 100px;
   position: relative;
   /* opacity: .7; */
@@ -1085,13 +1086,51 @@
   overflow: hidden;
 }
 
-.tiktoklife {
-  color: white;
+.tiktoklife1,
+.tiktoklife2 {
+  color: rgb(232, 232, 232);
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
   position: relative;
   top: 230px;
   font-size: 4.3rem;
+}
 
+.tiktoklife1 {
+  color: #ffe2e2;
+  height: 100px;
+  background-color: rgb(210, 74, 74);
+  border-radius: 20px;
+  margin: 0;
+}
+
+.video {
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.244);
+}
+
+.shinsakuCon {
+  color: white;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 230vh;
+  /* z-index: 999; */
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.shinsaku {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Coming {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
 }

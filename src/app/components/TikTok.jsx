@@ -17,7 +17,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
           trigger: `.${className}`, // トリガーをクラスごとに設定
           start: "-100% center", // スクロール開始位置
           end: "bottom 10%", // スクロール終了位置
-          scrub: 1, // スクロールに合わせて進行
+          scrub: true, // スクロールに合わせて進行
           // markers: true, // デバッグ用マーカーを表示
         },
         y: -(1000 - index * 200), // Y軸方向の移動距離を調整
@@ -28,7 +28,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".tikTextomae1",
       {
         opacity: 1,   // 初期状態
-        x: -2000,
+        x: -1000,
         y: -1000,
         rotate: -360
       },
@@ -51,7 +51,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".tikTextomae2",
       {
         opacity: 1,   // 初期状態
-        x: -2000,
+        x: -1000,
         y: 2000,
         rotate: 360
       },
@@ -74,7 +74,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".tikTextomae3",
       {
         opacity: 0,   // 初期状態
-        x: 2000,
+        x: 1000,
         y: -1000,
         rotate: 360
       },
@@ -97,7 +97,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".tikTextomae4",
       {
         opacity: 0,   // 初期状態
-        x: 2000,
+        x: 1000,
         y: 2000,
         rotate: 360
       },
@@ -117,7 +117,30 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       }
     );
     gsap.fromTo(
-      ".tiktoklife",
+      ".tiktoklife1",
+      {
+        opacity: 0,   // 初期状態
+        y: 400,
+        x: -400,
+        rotate: 1080
+      },
+      {
+        opacity: 1,   // 終了状態
+        y: 0,
+        x: 0,
+        rotate: 0,
+        duration: 1, // アニメーションの時間（任意）
+  scrollTrigger: {
+    trigger: ".section", // 親要素全体をトリガーに設定
+    start: "top 10%",  // .texts の上端が画面の75%位置に来たら開始
+    end: "bottom 30%", // .texts の下端が画面の25%位置に来たら終了
+    scrub: true,
+    // markers: true
+}
+      }
+    );
+    gsap.fromTo(
+      ".tiktoklife2",
       {
         opacity: 0,   // 初期状態
         y: 400,
@@ -141,15 +164,17 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".omatik",
       {
         opacity: 1,   // 初期状態
+        y: 0,
       },
       {
         opacity: 0,   // 終了状態
+        y: 150,
         duration: .1, // アニメーションの時間（任意）
   scrollTrigger: {
     trigger: ".section", // 親要素全体をトリガーに設定
     start: "top 0%",  // .texts の上端が画面の75%位置に来たら開始
     end: "bottom 50%", // .texts の下端が画面の25%位置に来たら終了
-    scrub: true,
+    scrub: 2,
     // markers: true
 }
       }
@@ -166,7 +191,7 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
     trigger: ".section", // 親要素全体をトリガーに設定
     start: "top 0%",  // .texts の上端が画面の75%位置に来たら開始
     end: "bottom 50%", // .texts の下端が画面の25%位置に来たら終了
-    scrub: true,
+    scrub: 3,
     // markers: true
 }
       }
@@ -175,15 +200,17 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
       ".otoko",
       {
         // x: 200,
-        y: -30,
-        x: -200,
-        rotate: -40
+        y: 30,
+        x: -150,
+        rotate: -30,
+        scale: 0.8
       },
       {
         // x: 0,
-        y: 600,
-        x: 0,
-        rotate: 20,
+        y: 400,
+        x: 100,
+        rotate: 40,
+        scales: 1,
         scrollTrigger: {
           trigger: ".section", // 親要素全体をトリガーに設定
           start: "top 0%",  // .texts の上端が画面の75%位置に来たら開始
@@ -208,8 +235,8 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
         scrollTrigger: {
           start: "top -10%",  // .texts の上端が画面の75%位置に来たら開始
           end: "bottom -10%", // .texts の下端が画面の25%位置に来たら終了
-          scrub: true,
-          markers: true
+          scrub: 1,
+          // markers: true
       }
     }
    );
@@ -229,8 +256,8 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
         scrollTrigger: {
           start: "top -20%",  // .texts の上端が画面の75%位置に来たら開始
           end: "bottom -20%", // .texts の下端が画面の25%位置に来たら終了
-          scrub: true,
-          markers: true
+          scrub: 1,
+          // markers: true
       }
     }
    );
@@ -250,8 +277,8 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
         scrollTrigger: {
           start: "top -30%",  // .texts の上端が画面の75%位置に来たら開始
           end: "bottom -30%", // .texts の下端が画面の25%位置に来たら終了
-          scrub: true,
-          markers: true
+          scrub: 1,
+          // markers: true
       }
     }
    );
@@ -271,8 +298,27 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
         scrollTrigger: {
           start: "top -40%",  // .texts の上端が画面の75%位置に来たら開始
           end: "bottom -40%", // .texts の下端が画面の25%位置に来たら終了
-          scrub: true,
-          markers: true
+          scrub: 1,
+          // markers: true
+      }
+    }
+   );
+    gsap.fromTo(
+      ".shinsakuCon",
+      {
+
+        opacity: 1,
+        // y: 0,
+      },
+      {
+        opacity: 0,
+        // y: 200,
+        scrollTrigger: {
+          start: "top -110%",  // .texts の上端が画面の75%位置に来たら開始
+          end: "bottom -120%", // .texts の下端が画面の25%位置に来たら終了
+          scrub: 3,
+          duration: 300
+          // markers: true
       }
     }
    );
@@ -313,24 +359,25 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
               <div className="tikTextomae4 tikText">士</div>
             </div>
             <div className="tiktoklifeCon">
-              <div className="tiktoklife">TikTokLife</div>
+              <div className="tiktoklife1">TikTok</div>
+              <div className="tiktoklife2">Life</div>
             </div>
           </div>
           <div className="moviesCon">
             <div className="movies">
               <div className="movies1">
-                <video src="/tiktoker.MP4"  className="video1" autoPlay playsInline muted loop></video>
-                <video src="/tiktoker1.MP4" autoPlay playsInline muted loop></video>
+                <video src="/tiktoker.MP4"  className="video" autoPlay playsInline muted loop></video>
+                <video src="/tiktoker1.MP4" className="video" autoPlay playsInline muted loop></video>
               </div>
               <div className="movies2">
-                <video src="/tiktoker2.MP4" autoPlay playsInline muted loop></video>
-                <video src="/tiktoker3.MP4" autoPlay playsInline muted loop></video>
+                <video src="/tiktoker2.MP4" className="video" autoPlay playsInline muted loop></video>
+                <video src="/tiktoker3.MP4" className="video" autoPlay playsInline muted loop></video>
               </div>
             </div>
           </div>
         </div>
         <div className="shinsakuCon">
-          <div className="shinsaku">新作を乞うご期待!</div>
+          <div className="shinsaku">新作を乞うご期待</div>
           <div className="Coming">Coming soon...</div>
         </div>
       </div>
@@ -339,3 +386,4 @@ function TikTok({ clickedTikTok, setClickedTikTok }) {
 }
 
 export default TikTok;
+
