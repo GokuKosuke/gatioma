@@ -17,8 +17,8 @@ function Hapiba() {
       opacity: 0,
       scrollTrigger: {
         trigger: ".hapiba" ,
-        start: "top 13%",
-        end: "top 10%",
+         start: "top 10%",
+        end: "top 0%",
         // markers: true,
         scrub: 1
       }
@@ -35,8 +35,8 @@ function Hapiba() {
       opacity: 0,
       scrollTrigger: {
         trigger: ".hapiba" ,
-        start: "top 13%",
-        end: "top 10%",
+         start: "top 10%",
+        end: "top 0%",
         scrub: 1
       }
     })
@@ -51,9 +51,9 @@ function Hapiba() {
       opacity: 0,
       scrollTrigger: {
         trigger: ".hapiba" ,
-        start: "top 13%",
-        end: "top 10%",
-        // markers: true,
+         start: "top 10%",
+        end: "top 0%",
+        markers: true,
         scrub: 1
       }
     })
@@ -64,8 +64,8 @@ function Hapiba() {
       opacity: 0,
       scrollTrigger: {
         trigger: ".hapiba" ,
-        start: "top 13%",
-        end: "top 10%",
+        start: "top 10%",
+        end: "top 0%",
         // markers: true,
         scrub: 1
       }
@@ -77,8 +77,8 @@ function Hapiba() {
       opacity: 0,
       scrollTrigger: {
         trigger: ".hapiba" ,
-        start: "top 13%",
-        end: "top 10%",
+         start: "top 10%",
+        end: "top 0%",
         // markers: true,
         scrub: 1
       }

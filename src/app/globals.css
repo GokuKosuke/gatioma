@@ -1250,6 +1250,7 @@
   /* border: 1px solid red; */
   overflow: hidden;
   transition: .3s ease;
+  width: 100%;
 }
 
 .hapibaTexts div {
@@ -1262,6 +1263,8 @@
   font-weight: 400;
   font-style: normal;
   transition: .3s ease;
+  overflow: hidden;
+  width: 100%;
 }
 
 .hapibaTexts div:nth-child(1) {
