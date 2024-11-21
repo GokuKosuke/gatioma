@@ -227,7 +227,7 @@ function Page1() {
         </div> */}
         <div className="scrollImages">
           <div className="Svideos1">
-            
+            <img src="/images1/1.jpg" alt="" />
           </div>
           <div className="SImages2">
             
@@ -238,7 +238,7 @@ function Page1() {
         </div>
         <div className="ScrollBigCon">
           <div className="ScrollyCon">
-            <ScrollyVideo src="/omaecanfly4.mp4" />
+            <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop />
           </div>
         </div>
     </div>
