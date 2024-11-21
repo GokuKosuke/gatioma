@@ -275,10 +275,12 @@ function Page1() {
           <div className="ScrollyCon">
             <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop />
           </div>
-          <div className={`flyingOMAE ${omaeFlied ? "omaeFlied" : ""}`} >
-            <img src="/flyingOMAE.PNG" alt="" />
-            <div className="cliped">
-              <img src="/clipedOmae.png" alt="" />
+          <div className="flyCon">
+            <div className={`flyingOMAE ${omaeFlied ? "omaeFlied" : ""}`} >
+              <img src="/flyingOMAE.PNG" alt="" />
+              <div className="cliped">
+                <img src="/clipedOmae.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
