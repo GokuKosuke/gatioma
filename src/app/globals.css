@@ -1303,7 +1303,7 @@
 
 .ScrollyCon {
   width: 400px;
-  height: 130vh;
+  height: 110vh;
   position: absolute;
   top: 270vh;
   z-index: 7;
@@ -1311,7 +1311,7 @@
 
 .scrollImages {
   position: absolute;
-  height: 130vh;
+  height: 200vh;
   width: 100%;
   top: 65vh;
   overflow: hidden;
@@ -1320,7 +1320,7 @@
 
 
 .SImages1 {
-  top: 55vh;
+  top: 49vh;
   width: 100%;
   height: 280px;
   display: flex;
@@ -1328,12 +1328,11 @@
   justify-content: left;
   /* z-index: 999; */
   gap: 20px;
-  overflow: hidden;
 
 }
 
 .SImages2 {
-  top: 61vh;
+  top: 53vh;
   width: 100%;
   height: 280px;
   display: flex;
@@ -1341,11 +1340,10 @@
   justify-content: left;
   /* z-index: 999; */
   gap: 20px;
-  overflow: hidden;
 }
 
 .SImages3 {
-  top: 58vh;
+  top: 51vh;
   width: 100%;
   height: 280px;
   display: flex;
@@ -1362,7 +1360,7 @@
 .SImages1 img:nth-child(4),
 .SImages1 img:nth-child(5)
 {
-  width: 45%;
+  width: 200px;
   position: relative;
   border-radius: 40px;
 }
@@ -1375,7 +1373,7 @@
 .SImages2 img:nth-child(5),
 .SImages2 img:nth-child(6)
 {
-  width: 45%;
+  width: 200px;
   position: relative;
   border-radius: 40px;
 }
@@ -1394,32 +1392,45 @@
 
 }
 
-.scrollTexts1 {
-  z-index: 999;
-  background-color: white;
-  height: 120px;
-  width: 100%;
+.donthiddenText {
+
   font-size: 5rem;
   position: absolute;
   top: 270px;
   overflow: hidden;
+  }
+.donthiddenText2 {
+
+  font-size: 5rem;
+  position: absolute;
+  top: 1310px;
+  overflow: hidden;
+  }
+
+.scrollTexts1 {
+  z-index: 999;
+  height: 120px;
+  width: 100%;
 }
 .scrollTexts2 {
   z-index: 999;
-  background-color: white;
   height: 120px;
   width: 100%;
-  font-size: 5rem;
-  position: absolute;
-  top: 1320px;
-  overflow: hidden;
 }
+
+
 
 .scrollTexts1 p {
   position: relative;
+  background-color: rgb(255, 255, 255);
+  font-size: 5rem;
+  top: 0;
 }
 .scrollTexts2 p {
   position: relative;
+  background-color: rgb(255, 255, 255);
+  font-size: 5rem;
+  top: 0;
 }
 
 .flyingOMAE {

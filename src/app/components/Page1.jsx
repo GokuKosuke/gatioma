@@ -125,7 +125,74 @@ function Page1() {
         onLeaveBack: () => {setTimeout(() => setOmaeFlied(false), 300)}
       }
     })
-
+    gsap.fromTo(".SImages1", {
+      x: 0,
+    },
+    {
+      x: -400,
+      scrollTrigger: {
+        trigger: ".SImages1",
+        start: "top 100%",
+        end: "top -10%",
+        scrub: true,
+        markers: true,
+      }
+    })
+    gsap.fromTo(".SImages2", {
+      x: 0,
+    },
+    {
+      x: -400,
+      scrollTrigger: {
+        trigger: ".SImages2",
+        start: "top 100%",
+        end: "top -10%",
+        scrub: true,
+        markers: true,
+      }
+    })
+    gsap.fromTo(".SImages3", {
+      x: 0,
+    },
+    {
+      x: 400,
+      scrollTrigger: {
+        trigger: ".SImages3",
+        start: "top 100%",
+        end: "top -10%",
+        scrub: true,
+        markers: true,
+      }
+    })
+    
+    gsap.fromTo(".scrollTexts1", {
+      x: -400,
+    },
+    {
+      x: 0,
+      scrollTrigger: {
+        trigger: ".scrollTexts1",
+        start: "top 100%",
+        end: "top -10%",
+        scrub: true,
+        markers: true,
+      }
+    })
+    
+    gsap.fromTo(".scrollTexts2", {
+      x: -400,
+    },
+    {
+      x: 0,
+      scrollTrigger: {
+        trigger: ".scrollTexts2",
+        start: "top 100%",
+        end: "top -10%",
+        scrub: true,
+        markers: true,
+      }
+    })
+    
 
   // // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
@@ -243,8 +310,10 @@ function Page1() {
           <video src="/omaecanfly.mov" autoPlay loop playsInline muted></video>
         </div> */}
         <div className="scrollImages">
-          <div className="scrollTexts1">
-            <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
+          <div className="donthiddenText">
+            <div className="scrollTexts1">
+              <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
+            </div>
           </div>
           <div className="SImages1">
             <img src="/images2/1.JPG" alt="" />
@@ -267,8 +336,10 @@ function Page1() {
             <img src="/images1/5.jpg" alt="" />
             <img src="/images1/6.jpg" alt="" />
           </div>
-          <div className="scrollTexts2">
-            <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
+          <div className="donthiddenText2">
+            <div className="scrollTexts2">
+              <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
+            </div>
           </div>
         </div>
         <div className="ScrollBigCon">
