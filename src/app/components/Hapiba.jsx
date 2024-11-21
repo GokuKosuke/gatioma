@@ -53,7 +53,7 @@ function Hapiba() {
         trigger: ".hapiba" ,
          start: "top 10%",
         end: "top 0%",
-        markers: true,
+        // markers: true,
         scrub: 1
       }
     })
@@ -100,6 +100,9 @@ function Hapiba() {
         </div>
         <div>さい</div>
         <div>おめでとう</div>
+      </div>
+      <div className="lottie">
+        <div id="lottie-container"></div>
       </div>
     </div>
   )

@@ -7,6 +7,8 @@ import Page1Content from './Hapiba';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Hapiba from './Hapiba';
+import Lottie from 'lottie-web';
+import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.cjs.jsx';
 
 
 function Page1() {
@@ -106,6 +108,56 @@ function Page1() {
         onLeaveBack: () => {setTimeout(() => setChangePink(false), 300)}
       }
     })
+
+
+  // // Lottieアニメーションの初期化
+  // const animation = Lottie.loadAnimation({
+  //   container: document.getElementById("lottie-container"), // Lottieの描画先
+  //   renderer: "svg", // レンダリング形式
+  //   loop: false, // ループしない
+  //   autoplay: false, // 自動再生しない（スクロールで制御）
+  //   path: "/omae.json", // JSONアニメーションのパス
+  // });
+
+  // // アニメーションデータがロードされるのを待つ
+  // animation.addEventListener("DOMLoaded", () => {
+  //   const totalFrames = animation.totalFrames; // 総フレーム数
+
+  //   // GSAPでLottieアニメーションを制御
+  //   gsap.to(animation, {
+  //     frame: totalFrames - 1, // 最終フレームまで
+  //     scrollTrigger: {
+  //       trigger: "#scroll-section", // スクロールトリガー要素
+  //       start: "top top", // 開始位置
+  //       end: "bottom bottom", // 終了位置
+  //       scrub: 1, // スクロールと同期
+  //       markers: true, // デバッグ用マーカー（必要ならコメントアウト）
+  //     },
+  //     onUpdate: () => {
+  //       animation.goToAndStop(Math.round(animation.frame), true); // フレームを更新
+  //     },
+  //   });
+  // })
+
+  //   // クリーンアップ
+  //   return () => {
+  //     animation.destroy(); // コンポーネントがアンマウントされたらアニメーションを破棄
+  //   };
+     // Dynamically load the scrolly-video script
+     const script = document.createElement("script");
+     script.src = "";
+     script.async = true;
+     script.onload = () => {
+       // Initialize ScrollyVideo once the script is loaded
+       new window.ScrollyVideo({
+         scrollyVideoContainer: "oiwa", // ID of the container
+         src: "/omaecanfly.mov",           // Video source
+         transitionSpeed: 0.8,          // Transition speed
+         trackScroll: true              // Enable scroll tracking
+       });
+     };
+     document.body.appendChild(script);
+ 
   })
 
   return (
@@ -170,6 +222,12 @@ function Page1() {
             </div>
         <Hapiba />
       </div>
+        {/* <div className="flyingCon">
+          <video src="/omaecanfly.mov" autoPlay loop playsInline muted></video>
+        </div> */}
+        <div className="ScrollyCon">
+          <ScrollyVideo src="/omaecanfly.mp4" />
+        </div>
     </div>
   );
 }
