@@ -152,7 +152,7 @@ function Page1() {
        new window.ScrollyVideo({
          scrollyVideoContainer: "oiwa", // ID of the container
          src: "/omaecanfly.mov",           // Video source
-         transitionSpeed: 0.8,          // Transition speed
+        // Transition speed
          trackScroll: true              // Enable scroll tracking
        });
      };
@@ -225,8 +225,10 @@ function Page1() {
         {/* <div className="flyingCon">
           <video src="/omaecanfly.mov" autoPlay loop playsInline muted></video>
         </div> */}
-        <div className="ScrollyCon">
-          <ScrollyVideo src="/omaecanfly.mp4" />
+        <div className="ScrollBigCon">
+          <div className="ScrollyCon">
+            <ScrollyVideo src="/omaecanfly4.mp4" />
+          </div>
         </div>
     </div>
   );
