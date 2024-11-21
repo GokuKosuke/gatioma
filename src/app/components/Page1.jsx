@@ -15,6 +15,7 @@ function Page1() {
   const [clicked, setClicked] = useState(false);
   const [randomImage, setRandomImage] = useState(null);
   const [menuActive, setMenuActive] = useState(false); // メニューの状態を管理
+  const [omaeFlied, setOmaeFlied] = useState(false); // メニューの状態を管理
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -108,6 +109,22 @@ function Page1() {
         onLeaveBack: () => {setTimeout(() => setChangePink(false), 300)}
       }
     })
+    gsap.fromTo(".flyingOMAE > img", {
+      // opacity: 0
+    },
+    {
+      // opacity: 1,
+      scrollTrigger: {
+        trigger: ".flyingOMAE",
+        start: "top 17%",
+        end: "top 17.01%",
+        scrub: true,
+        duration: 100,
+        // markers: true,
+        onEnter: () => setOmaeFlied(true),
+        onLeaveBack: () => {setTimeout(() => setOmaeFlied(false), 300)}
+      }
+    })
 
 
   // // Lottieアニメーションの初期化
@@ -144,19 +161,19 @@ function Page1() {
   //     animation.destroy(); // コンポーネントがアンマウントされたらアニメーションを破棄
   //   };
      // Dynamically load the scrolly-video script
-     const script = document.createElement("script");
-     script.src = "";
-     script.async = true;
-     script.onload = () => {
-       // Initialize ScrollyVideo once the script is loaded
-       new window.ScrollyVideo({
-         scrollyVideoContainer: "oiwa", // ID of the container
-         src: "/omaecanfly.mov",           // Video source
-        // Transition speed
-         trackScroll: true              // Enable scroll tracking
-       });
-     };
-     document.body.appendChild(script);
+    //  const script = document.createElement("script");
+    //  script.src = "";
+    //  script.async = true;
+    //  script.onload = () => {
+    //    // Initialize ScrollyVideo once the script is loaded
+    //    new window.ScrollyVideo({
+    //      scrollyVideoContainer: "oiwa", // ID of the container
+    //      src: "/omaecanfly.mov",           // Video source
+    //     // Transition speed
+    //      trackScroll: true              // Enable scroll tracking
+    //    });
+    //  };
+    //  document.body.appendChild(script);
  
   })
 
@@ -217,28 +234,52 @@ function Page1() {
               {/* <img src="" alt="" /> */}
             </div>
         </div>
-            <div className="pinkBack">
-              <div className="pink"></div>
-            </div>
+        <div className="pinkBack">
+          <div className="pink"></div>
+        </div>
         <Hapiba />
       </div>
         {/* <div className="flyingCon">
           <video src="/omaecanfly.mov" autoPlay loop playsInline muted></video>
         </div> */}
         <div className="scrollImages">
-          <div className="Svideos1">
-            <img src="/images1/1.jpg" alt="" />
+          <div className="scrollTexts1">
+            <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
           </div>
-          <div className="SImages2">
-            
+          <div className="SImages1">
+            <img src="/images2/1.JPG" alt="" />
+            <img src="/images2/2.JPG" alt="" />
+            <img src="/images2/3.JPG" alt="" />
+            <img src="/images2/4.JPG" alt="" />
+            <img src="/images2/5.JPG" alt="" />
           </div>
           <div className="SImages3">
-            
+            <img src="/images3/5.jpg" alt="" />
+            <img src="/images3/4.PNG" alt="" />
+            <img src="/images3/3.PNG" alt="" />
+            <img src="/images3/2.PNG" alt="" />
+            <img src="/images3/1.PNG" alt="" />
+          </div>
+          <div className="SImages2">
+            <img src="/images1/2.jpg" alt="" />
+            <img src="/images1/3.jpg" alt="" />
+            <img src="/images1/4.jpg" alt="" />
+            <img src="/images1/5.jpg" alt="" />
+            <img src="/images1/6.jpg" alt="" />
+          </div>
+          <div className="scrollTexts2">
+            <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
           </div>
         </div>
         <div className="ScrollBigCon">
           <div className="ScrollyCon">
             <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop />
+          </div>
+          <div className={`flyingOMAE ${omaeFlied ? "omaeFlied" : ""}`} >
+            <img src="/flyingOMAE.PNG" alt="" />
+            <div className="cliped">
+              <img src="/clipedOmae.png" alt="" />
+            </div>
           </div>
         </div>
     </div>
