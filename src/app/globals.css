@@ -11,7 +11,7 @@
 .body {
   background-color: #000000;
   width: 100%;
-  height: 300vh;
+  height: 500vh;
   position: relative;
   top: 0;
 }
@@ -1152,7 +1152,7 @@
 
 .heatsOmaeCon {
   width: 100%;
-  height: 200vh;
+  height: 400vh;
   position: absolute;
   overflow: hidden;
   display: flex;
@@ -1299,7 +1299,7 @@
 }
 
 .ScrollyCon {
-  width: 500px;
+  width: 100%;
   height: 200vh;
   position: absolute;
   top: 200vh;

@@ -225,6 +225,17 @@ function Page1() {
         {/* <div className="flyingCon">
           <video src="/omaecanfly.mov" autoPlay loop playsInline muted></video>
         </div> */}
+        <div className="scrollImages">
+          <div className="Svideos1">
+            
+          </div>
+          <div className="SImages2">
+            
+          </div>
+          <div className="SImages3">
+            
+          </div>
+        </div>
         <div className="ScrollBigCon">
           <div className="ScrollyCon">
             <ScrollyVideo src="/omaecanfly4.mp4" />
