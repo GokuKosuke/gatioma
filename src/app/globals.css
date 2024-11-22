@@ -1461,17 +1461,17 @@
 }
 
 .flyingOMAE img:nth-child(1) {
-  height: 480px;
+  height: 510px;
   width: 207px;
   opacity: 0;
   position: relative;
   z-index: 8;
   left: 2px;
-  top: 18px;
+  top: 28px;
 }
 
 .flyingOMAE img:nth-child(2) {
-  height: 750px;
+  height: 780px;
   width: 407px;
   top: -85px;
   /* opacity: 0; */
