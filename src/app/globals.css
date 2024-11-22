@@ -1221,7 +1221,7 @@
 
 .pink {
   width: 100%;
-  min-height: 400vh;
+  min-height: 500vh;
   background-color: #ffa7ef;
   position: absolute;
   opacity: 1;
@@ -1824,4 +1824,14 @@
   position: relative;
   /* border: 2px solid blue; */
   transform: scale(3.5);
+}
+
+.finalSection {
+  width: 100%;
+  height: 200vh;
+  border: 10px solid blue;
+  position: absolute;
+  top: 510vh;
+  z-index: 999;
+  overflow: hidden;
 }

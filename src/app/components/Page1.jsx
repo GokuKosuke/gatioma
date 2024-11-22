@@ -515,7 +515,7 @@ function Page1() {
               {/* <img src="" alt="" /> */}
             <div className='omaeKabao'>
               <div className="withkabaCon">
-                <img src="/kabao/Withkaba.PNG" alt="" />
+                <img src="/kabao/withkaba.PNG" alt="" />
               </div>
             </div>
             </div>
@@ -605,8 +605,6 @@ function Page1() {
             <img src="/kabao/Withkaba.PNG" alt="" />
           </div>
         </div>
-
-
     </div>
   );
 }
