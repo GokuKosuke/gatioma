@@ -71,8 +71,8 @@ function Page1() {
       rotate: 60,
       scrollTrigger: {
         trigger: ".heartsOmae",
-        start: "top 60%",
-        end: "top 55%",
+        start: "top 40%",
+        end: "top 35%",
         scrub: 1,
         // markers: true,
       }
@@ -90,8 +90,8 @@ function Page1() {
       rotate: -60,
       scrollTrigger: {
         trigger: ".heartsOmae",
-        start: "top 60%",
-        end: "top 55%",
+        start: "top 40%",
+        end: "top 35%",
         scrub: 1,
         // markers: true,
       }
@@ -103,8 +103,8 @@ function Page1() {
       opacity: 1,
       scrollTrigger: {
         trigger: ".heartsOmae",
-        start: "top 60%",
-        end: "top 85%",
+        start: "top 40%",
+        end: "top 35%",
         scrub: 2,
         // markers: true,
         onEnter: () => setChangePink(true),
@@ -216,9 +216,9 @@ function Page1() {
       scrollTrigger: {
         trigger: ".bulliedKABAO",
         start: "top 50%",
-        end: "top 60%",
+        end: "top 70%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
 
@@ -233,7 +233,7 @@ function Page1() {
         start: "top 55%",
         end: "top 65%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
 
@@ -247,7 +247,7 @@ function Page1() {
         start: "top 55%",
         end: "top 65%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
     gsap.fromTo(".environments img:nth-child(4)", {
@@ -258,11 +258,11 @@ function Page1() {
       scrollTrigger: {
         trigger: ".bulliedKABAO",
         start: "top 47%",
-        end: "top 60%",
+        end: "top 70%",
         scrub: 1,
         duration: 2000,
         delay: 300,
-        markers: true,
+        // markers: true,
       }
     })
     gsap.fromTo(".environments img:nth-child(5)", {
@@ -273,11 +273,11 @@ function Page1() {
       scrollTrigger: {
         trigger: ".bulliedKABAO",
         start: "top 47%",
-        end: "top 60%",
+        end: "top 70%",
         scrub: 1,
         duration: 2000,
         delay: 300,
-        markers: true,
+        // markers: true,
       }
     })
 
@@ -289,9 +289,89 @@ function Page1() {
       scrollTrigger: {
         trigger: ".bulliedKABAO",
         start: "top 50%",
+        end: "top 70%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+
+    gsap.fromTo(".environments img:nth-child(7)", {
+      y: 400
+    },
+    {
+      y:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 70%",
         end: "top 60%",
         scrub: 1,
-        markers: true,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".environments img:nth-child(8)", {
+      opacity: 0
+    },
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 80%",
+        end: "top 70%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".environments img:nth-child(9)", {
+      x: -400
+    },
+    {
+      x:700,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 40%",
+        end: "top 0%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+
+    gsap.fromTo(".environments img:nth-child(10)", {
+      x: 500
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 50%",
+        end: "top 70%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".kaba", {
+      y: 200
+    },
+    {
+      y:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 50%",
+        end: "top 70%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".bullyingCars", {
+      y: 200
+    },
+    {
+      y:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 50%",
+        end: "top 70%",
+        scrub: 1,
+        // markers: true,
       }
     })
 
@@ -300,6 +380,15 @@ function Page1() {
         trigger: ".omaeFlied.flyingOMAE", // スクロールのトリガーとなる要素
         start: "top 0.7%",
         end: "top -50%",
+        scrub: 2, // スクロールに合わせてアニメーションをスムーズに動かす
+        // markers: true, // デバッグ用のマーカーを表示
+      },
+    });
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".withkabaCon", // スクロールのトリガーとなる要素
+        start: "top 15%",
+        end: "top 0%",
         scrub: 2, // スクロールに合わせてアニメーションをスムーズに動かす
         markers: true, // デバッグ用のマーカーを表示
       },
@@ -313,6 +402,11 @@ function Page1() {
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 300, y:900, x: -1000,delay:2})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 340, y:1500, x: 1000,rotate:-50,delay:6})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 400, y:-300, x: -1000,delay:5})
+
+    tl2
+    .to(".withkabaCon > img", {duration: 50, y:-300, x: 1300,rotate: -90 })
+    .to(".withkabaCon > img", {duration: 200, y: 500, x: -800, rotate: 360})
+    .to(".withkabaCon > img", {duration: 400,y: 500, x: -1600, rotate: 360})
 
   // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
@@ -419,6 +513,11 @@ function Page1() {
               <img src="/peaceomae.PNG" alt="" />
               <img src="/loveomae.PNG" alt="" />
               {/* <img src="" alt="" /> */}
+            <div className='omaeKabao'>
+              <div className="withkabaCon">
+                <img src="/kabao/Withkaba.PNG" alt="" />
+              </div>
+            </div>
             </div>
         </div>
         <div className="pinkBack">
@@ -497,15 +596,17 @@ function Page1() {
             <img src="/kabao/tree.PNG" alt="" />
             <img src="/kabao/grou.PNG" alt="" />
             <img src="/kabao/kabi.PNG" alt="" />
+            <img src="/flyingOMAE.PNG" alt="" />
+            <img src="/kabao/mountain.PNG" alt="" />
+          </div>
+        </div>
+        <div className="finalSection">
+          <div className="finalkaba">
+            <img src="/kabao/Withkaba.PNG" alt="" />
           </div>
         </div>
 
-        <div className='omaeKabao'>
-          <div className="withkabaCon">
-            <img src="/kabao/Withkaba.PNG" alt="" />
-          </div>
-            
-        </div>
+
     </div>
   );
 }
