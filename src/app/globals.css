@@ -1442,12 +1442,14 @@
 }
 .flyingOMAE {
   /* width: 100%; */
+  height: 500px;
   /* z-index: 9; */
   top: 286vh;
   left: -36px;
   position: absolute;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -1467,8 +1469,10 @@
 
 .omaeFlied.cliped {
   width: 100%;
+  height: 400px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
   overflow: hidden;
   left: 0px;
@@ -1479,16 +1483,19 @@
 .cliped {
   opacity: 0;
   overflow: hidden;
+  position: absolute;
 }
 
 
 .omaeFlied.cliped {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
-  top: 1619px;
-  position: relative;
+  top: -206px;
+  position: absolute;
   z-index: 9;
   opacity: 1;
 }
