@@ -881,7 +881,7 @@
 
 .activetiktok.tiktokpage {
   background: rgb(255,255,255);
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 20%,black 21%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 10%,black 11%,black 100%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
   /* background: black; */
   position: absolute;
   z-index: 999;
