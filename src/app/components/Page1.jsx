@@ -430,11 +430,9 @@ function Page1() {
     })
     gsap.fromTo(".whiteBack", {
       y: 0,
-      x:0,
     },
     {
-      y: 1000,
-      x: -100,
+      y: 300,
       scrollTrigger: {
         trigger: ".whiteCon",
         start: "top 10%",
@@ -454,6 +452,21 @@ function Page1() {
         trigger: ".whiteCon",
         start: "top -20%",
         end: "top -50%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".withkabaCon > img:nth-child(2)", {
+      x: 0,
+      opacity: 0
+    },
+    {
+      x: -1300,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".withkabaCon",
+        start: "top 0%",
+        end: "top 30%",
         scrub: 1,
         // markers: true,
       }
@@ -487,10 +500,10 @@ function Page1() {
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 400, y:1500, x: 1000,rotate:-50,delay:6})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 500, y:-300, x: -1000,delay:5})
 
-    tl2
-    .to(".withkabaCon > img", {duration: 500, y:-300, x: 400,rotate: -90 })
-    .to(".withkabaCon > img", {duration: 700, y: 500, x: -1200, rotate: 360})
-    .to(".withkabaCon > img", {duration: 900,y: 500, x: -1600, rotate: 360})
+    // tl2
+    // .to(".withkabaCon > img:nth-child(1)", {duration: 500, y:-300, x: 400,rotate: -90 })
+    // .to(".withkabaCon > img:nth-child(1)", {duration: 700, y: 500, x: -1200, rotate: 360})
+    // .to(".withkabaCon > img:nth-child(1)", {duration: 900,y: 500, x: -1600, rotate: 360})
 
   // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
@@ -599,6 +612,8 @@ function Page1() {
               {/* <img src="" alt="" /> */}
             <div className='omaeKabao'>
               <div className="withkabaCon">
+                {/* <img src="/kabao/withKaba.PNG" alt="" /> */}
+                <img  alt="" />
                 <img src="/kabao/withKaba.PNG" alt="" />
               </div>
             </div>

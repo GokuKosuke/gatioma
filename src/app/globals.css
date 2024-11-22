@@ -1868,21 +1868,32 @@
   width: 100%;
   height: 100%;
   top: 20vh;
-  position: absolute;
+  position: relative;
   /* border: 1px red solid; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.withkabaCon img {
+.withkabaCon img:nth-child(1) {
   width: 1000px;
   /* top: 100vh; */
   top: -500px;
+  right: -900px;
+  position: relative;
+  /* border: 2px solid blue; */
+  transform: scale(3.5);
+}
+.withkabaCon img:nth-child(2) {
+  width: 200px;
+  /* top: 100vh; */
+  top: 0px;
   right: -1200px;
   position: relative;
   /* border: 2px solid blue; */
   transform: scale(3.5);
+  /* background-color: red; */
+  opacity: 0;
 }
 
 .finalSection {
