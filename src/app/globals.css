@@ -298,6 +298,9 @@
   .kabaoTooth.topbar {
     background-color: white;
   }
+  .kabaoTooth.topbar .GATIOMAE {
+    color: black;
+  }
 
   @keyframes pave {
 
@@ -1938,13 +1941,14 @@
   left: 110px;
   transform: rotate(-20deg);
   border-radius: 5px;
-  transition: 3s ease;
+  transition: 2s ease;
 }
 
 .kabaotooth.whiteBack {
   width: 2000px;
-  height: 4000px;
-  transform: rotate(0deg);
+  height: 2000px;
+  left: -700px;
+  transform: rotate(-45deg) !important;
   position: absolute;
 }
 

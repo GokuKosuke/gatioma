@@ -108,7 +108,7 @@ function Page1() {
         end: "top 35%",
         scrub: 2,
         // markers: true,
-        onEnter: () => setChangePink(true),
+        onEnter: () => {setChangePink(true),setkabaotooth(false)},
         onLeaveBack: () => {setTimeout(() => setChangePink(false), 300)}
       }
     })
@@ -433,15 +433,15 @@ function Page1() {
       x:0,
     },
     {
-      y: 500,
-      x: -600,
+      y: 1000,
+      x: -100,
       scrollTrigger: {
         trigger: ".whiteCon",
-        start: "top 20%",
-        end: "top -10%",
-        scrub: 1,
-        onEnter: () => {setTimeout(() => setkabaotooth(true), 1000)},
-        onLeaveBack:  () => {setTimeout(() => setkabaotooth(false),1000)},
+        start: "top 10%",
+        end: "top -30%",
+        scrub: true,
+        onEnter: () => {setTimeout(() => setkabaotooth(true),setChangePink(false), 700)},
+        onLeaveBack:  () => {setTimeout(() => setkabaotooth(false),200)},
         // markers: true,
       }
     })
@@ -473,7 +473,7 @@ function Page1() {
         trigger: ".withkabaCon", // スクロールのトリガーとなる要素
         start: "top 15%",
         end: "top 0%",
-        scrub: 2, // スクロールに合わせてアニメーションをスムーズに動かす
+        scrub: 1, // スクロールに合わせてアニメーションをスムーズに動かす
         // markers: true, // デバッグ用のマーカーを表示
       },
     });
@@ -488,9 +488,9 @@ function Page1() {
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 500, y:-300, x: -1000,delay:5})
 
     tl2
-    .to(".withkabaCon > img", {duration: 100, y:-300, x: 1300,rotate: -90 })
-    .to(".withkabaCon > img", {duration: 300, y: 500, x: -800, rotate: 360})
-    .to(".withkabaCon > img", {duration: 500,y: 500, x: -1600, rotate: 360})
+    .to(".withkabaCon > img", {duration: 500, y:-300, x: 400,rotate: -90 })
+    .to(".withkabaCon > img", {duration: 700, y: 500, x: -1200, rotate: 360})
+    .to(".withkabaCon > img", {duration: 900,y: 500, x: -1600, rotate: 360})
 
   // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
