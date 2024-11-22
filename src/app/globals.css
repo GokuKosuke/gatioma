@@ -1829,9 +1829,45 @@
 .finalSection {
   width: 100%;
   height: 200vh;
-  border: 10px solid blue;
+  /* border: 10px solid blue; */
   position: absolute;
-  top: 510vh;
+  top: 490vh;
   z-index: 999;
   overflow: hidden;
+}
+
+.finalkaba {
+  width: 100%;
+  height: 200VH;
+  position: absolute;
+  /* border: 5px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.finalkaba img:nth-child(1) {
+  width: 400px;
+  z-index: 999;
+  left: -400px;
+  top: 1700px;
+  position: relative;
+  transform: scale(6) rotate(-270deg);
+}
+.finalkaba img:nth-child(2) {
+  width: 400px;
+  z-index: 999;
+  left: -700px;
+  top: 820px;
+  position: relative;
+  opacity: 0;
+}
+
+.whiteBack {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  position: relative;
+  z-index: 999;
+  left: -500px;
 }

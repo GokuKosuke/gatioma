@@ -374,6 +374,43 @@ function Page1() {
         // markers: true,
       }
     })
+    gsap.fromTo(".finalkaba > img:nth-child(1)", {
+      x: 0,
+      y: 0,
+      // scaleX: -1,
+      // width: 100,
+    },
+    {
+      x:600,
+      y:-1600,
+      // scaleX: -1,
+      // width: 1000,
+      scrollTrigger: {
+        trigger: ".finalkaba",
+        start: "top 10%",
+        end: "top 100%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".finalkaba > img:nth-child(2)", {
+      x: 0,
+      y: 0,
+      opacity: 0
+
+    },
+    {
+      x:600,
+      y:-1200,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".finalkaba",
+        start: "top 0%",
+        end: "top 100%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -515,7 +552,7 @@ function Page1() {
               {/* <img src="" alt="" /> */}
             <div className='omaeKabao'>
               <div className="withkabaCon">
-                <img src="/kabao/withkaba.PNG" alt="" />
+                <img src="/kabao/withKaba.PNG" alt="" />
               </div>
             </div>
             </div>
@@ -602,7 +639,9 @@ function Page1() {
         </div>
         <div className="finalSection">
           <div className="finalkaba">
-            <img src="/kabao/Withkaba.PNG" alt="" />
+            <img src="/kabao/withKaba.PNG" alt="" />
+            <img src="/kabao/arigato.PNG" alt="" />
+            <div className='whiteBack'></div>
           </div>
         </div>
     </div>
