@@ -168,10 +168,10 @@ function Page1() {
     })
     
     gsap.fromTo(".scrollTexts1", {
-      x: -400,
+      x: -800,
     },
     {
-      x: 0,
+      x: -300,
       scrollTrigger: {
         trigger: ".scrollTexts1",
         start: "top 100%",
@@ -182,19 +182,18 @@ function Page1() {
     })
     
     gsap.fromTo(".scrollTexts2", {
-      x: -400,
+      x: -800,
     },
     {
-      x: 0,
+      x: -300,
       scrollTrigger: {
-        trigger: ".scrollTexts2",
-        start: "top 100%",
-        end: "top -10%",
+        trigger: ".SImages3",
+        start: "top 10%",
+        end: "top -110%",
         scrub: 1,
         markers: true,
       }
     })
-    
 
     // tl
     // .to(".", {duration: 1, x: 100, y: -300})
@@ -342,11 +341,9 @@ function Page1() {
             <img src="/images1/5.jpg" alt="" />
             <img src="/images1/6.jpg" alt="" />
           </div>
-          <div className="donthiddenText2">
             <div className="scrollTexts2">
               <p>OMAEOMAEOMAEOMAEOMAEOMAE</p>
             </div>
-          </div>
         </div>
         <div className="ScrollBigCon">
           <div className="ScrollyCon">

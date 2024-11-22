@@ -1395,7 +1395,7 @@
 
 }
 
-.donthiddenText {
+/* .donthiddenText {
 
   font-size: 5rem;
   position: absolute;
@@ -1409,17 +1409,23 @@
   position: absolute;
   top: 1292px;
   overflow: hidden;
-  }
+  } */
 
 .scrollTexts1 {
   z-index: 999;
-  height: 120px;
+  height: 100vh;
   width: 100%;
+  position: absolute;
+  align-items: center;
+  display: flex;
 }
 .scrollTexts2 {
   z-index: 999;
-  height: 120px;
+  height: 100vh;
   width: 100%;
+  position: absolute;
+  align-items: center;
+  display: flex;
 }
 
 
@@ -1428,13 +1434,13 @@
   position: relative;
   background-color: rgb(255, 255, 255);
   font-size: 5rem;
-  top: 0;
+  top: -41px;
 }
 .scrollTexts2 p {
   position: relative;
   background-color: rgb(255, 255, 255);
   font-size: 5rem;
-  top: 0;
+  top: 976px;
 }
 
 .flyCon {
