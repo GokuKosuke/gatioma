@@ -433,7 +433,7 @@ function Page1() {
       x:0,
     },
     {
-      y: 100,
+      y: 500,
       x: -600,
       scrollTrigger: {
         trigger: ".whiteCon",
@@ -453,7 +453,7 @@ function Page1() {
       scrollTrigger: {
         trigger: ".whiteCon",
         start: "top -20%",
-        end: "top -10%",
+        end: "top -50%",
         scrub: 1,
         // markers: true,
       }
@@ -484,13 +484,13 @@ function Page1() {
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 10, y: -500, rotate: 0})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 14, x: 500, rotate: -140})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 300, y:900, x: -1000,delay:2})
-    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 340, y:1500, x: 1000,rotate:-50,delay:6})
-    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 400, y:-300, x: -1000,delay:5})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 400, y:1500, x: 1000,rotate:-50,delay:6})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 500, y:-300, x: -1000,delay:5})
 
     tl2
-    .to(".withkabaCon > img", {duration: 50, y:-300, x: 1300,rotate: -90 })
-    .to(".withkabaCon > img", {duration: 200, y: 500, x: -800, rotate: 360})
-    .to(".withkabaCon > img", {duration: 400,y: 500, x: -1600, rotate: 360})
+    .to(".withkabaCon > img", {duration: 100, y:-300, x: 1300,rotate: -90 })
+    .to(".withkabaCon > img", {duration: 300, y: 500, x: -800, rotate: 360})
+    .to(".withkabaCon > img", {duration: 500,y: 500, x: -1600, rotate: 360})
 
   // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({

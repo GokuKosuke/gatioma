@@ -60,10 +60,74 @@ function Bar({ children }) {
     { label: "Settings", href: "#", icon: <SettingsIcon />, onClick: handleClickSettings },
   ];
 
+/*settings*/
+  const [clickedIndex, setClickedIndex] = useState(false);
+  const [clickedMaskClick, setClickedMaskClick] = useState(false);
+  const [clickedC1, setC1] = useState(false);
+  const [clickedC2, setC2] = useState(false);
+  const [clickedC3, setC3] = useState(false);
+  const [clickedC4, setC4] = useState(false);
+
+  const handleIndex = (index) => {
+    setClickedIndex(index);
+  };
+
+  const handleColor = () => {
+    setClickedColor(!clickedColor); // 親から受け取った setClickedColor を呼び出す
+  };
+
+  const handleMaskClick = () => {
+    setClickedMaskClick(!clickedMaskClick)
+  }
+
+  const handleC1 = () => {
+    setC1(!clickedC1)
+    setC2(false)
+    setC3(false)
+    setC4(false)
+  }
+  const handleC2 = () => {
+    setC2(!clickedC2)
+    setC1(false)
+    setC3(false)
+    setC4(false)
+  }
+  const handleC3 = () => {
+    setC3(!clickedC3)
+    setC2(false)
+    setC1(false)
+    setC4(false)
+  }
+  const handleC4 = () => {
+    setC4(!clickedC4)
+    setC2(false)
+    setC3(false)
+    setC1(false)
+  }
+  const links2 = [
+    { label: "Color", href: "#", onClick: handleColor, className: `colorText ${clickedColor ? "clickedColor" : ""}` },
+    { label: "Policy", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
+    // { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
+    // { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
+    // { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` }
+  ];
+  /*settings*/
+
+
   return (
     <>
       <ChildComponent>
-        <div className={`btn ${clicked ? "clicked" : ""} ${settingsClicked ? "settingsClicked" : ""} ${clickedColor ? "clickedColor" : ""}`} onClick={handleClick}>
+        <div className={`btn ${clicked ? "clicked" : ""} ${settingsClicked ? "settingsClicked" : ""} ${clickedColor ? "clickedColor" : ""} ${
+    clickedC1
+      ? "clickedC1"
+      : clickedC2
+      ? "clickedC2"
+      : clickedC3
+      ? "clickedC3"
+      : clickedC4
+      ? "clickedC4"
+      : ""
+  }`} onClick={handleClick}>
           <div className="btnbar1 bb"></div>
           <div className="btnbar2 bb"></div>
           <div className="btnbar3 bb"></div>
@@ -97,12 +161,48 @@ function Bar({ children }) {
           </div>
           <Profile />
         </div>
-        <Settings
+
+
+
+        {/* <Settings
           settingsClicked={settingsClicked} 
           setSettingsClicked={setSettingsClicked} 
           clickedColor={clickedColor} 
           setClickedColor={setClickedColor} 
-        />
+        /> */}
+           <div className={`settingsContainer ${settingsClicked ? "clickedSettings" : ""} `}>
+      <div className={`settingsContent ${settingsClicked ? "clickedSettings" : ""}`}>
+        <ul>
+          {links2.map((link, index) => (
+            <li key={index}>
+              <a
+                href={link.href}
+                onClick={(e) => {
+                  handleIndex(index);
+                  if (link.onClick) link.onClick(e); // handleColorが存在すれば実行
+                }}
+                className={link.className}
+              >
+                {link.label}
+                <div className={`underbarSettings ${index === clickedIndex ? "barClicked" : ""}`}></div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={`colorContainer ${clickedColor ? "clickedColor" : ""} ${clickedMaskClick ? "clickedColor2" : ""}`} onClick={handleMaskClick}>
+        <div className={`colors ${clickedColor ? "clickedColor" : ""}`}>
+          <div className={`red color ${clickedColor ? "clickedColor" : ""} ${clickedC1 ? "clickedC1" : ""}`} onClick={handleC1}></div>
+          <div className={`blue color ${clickedColor ? "clickedColor" : ""} ${clickedC2 ? "clickedC2" : ""}`} onClick={handleC2}></div>
+          <div className={`yellow color ${clickedColor ? "clickedColor" : ""} ${clickedC3 ? "clickedC3" : ""}`} onClick={handleC3}></div>
+          <div className={`green color ${clickedColor ? "clickedColor" : ""} ${clickedC4 ? "clickedC4" : ""}`} onClick={handleC4}></div>
+          {/* <div className={`pink color ${clickedColor ? "clickedColor" : ""}`}></div> */}
+        </div>
+      </div>
+    </div>
+
+
+
         <TikTok clickedTikTok={clickedTikTok} setClickedTikTok={setClickedTikTok}/>
       </ChildComponent>
     </>
