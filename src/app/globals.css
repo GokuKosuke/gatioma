@@ -1158,7 +1158,7 @@
   display: flex;
   justify-content: center;
   top: 100px;
-  z-index: 999;
+  z-index: 3;
 }
 
 .heartsOmae {
@@ -1440,7 +1440,7 @@
   position: relative;
   background-color: rgb(255, 255, 255);
   font-size: 5rem;
-  top: 976px;
+  top: 988px;
 }
 
 .flyCon {
@@ -1467,12 +1467,12 @@
 }
 
 .flyingOMAE img:nth-child(1) {
-  height: 510px;
-  width: 207px;
+  height: 530px;
+  width: 250px;
   opacity: 0;
   position: relative;
   z-index: 8;
-  left: 2px;
+  left: -13px;
   top: 28px;
 }
 
@@ -1490,7 +1490,13 @@
 
 
 
+.sc {
+  visibility: visible;
+}
 
+.omaeFlied.sc {
+  visibility: hidden;
+}
 
 
 
@@ -1553,7 +1559,7 @@
   width: 400px;
   position: relative;
   /* border: 1px solid red; */
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .omaeFlied.flyingOMAE {

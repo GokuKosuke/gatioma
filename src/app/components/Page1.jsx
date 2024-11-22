@@ -9,6 +9,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Hapiba from './Hapiba';
 import Lottie from 'lottie-web';
 import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.cjs.jsx';
+import { duration } from '@mui/material';
 
 
 function Page1() {
@@ -17,7 +18,6 @@ function Page1() {
   const [menuActive, setMenuActive] = useState(false); // メニューの状態を管理
   const [omaeFlied, setOmaeFlied] = useState(false); // メニューの状態を管理
 
-  const tl = gsap.timeline();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -122,6 +122,7 @@ function Page1() {
         end: "top 10.6%",
         scrub: true,
         duration: 100,
+        delay: 4000,
         // markers: true,
         onEnter: () => setOmaeFlied(true),
         onLeaveBack: () => {setTimeout(() => setOmaeFlied(false), 300)}
@@ -195,11 +196,23 @@ function Page1() {
       }
     })
 
-    // tl
-    // .to(".", {duration: 1, x: 100, y: -300})
-    // .to()
 
-  // // Lottieアニメーションの初期化
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".omaeFlied.flyingOMAE", // スクロールのトリガーとなる要素
+        start: "top 0.7%",
+        end: "top 0.6%",
+        scrub: 1, // スクロールに合わせてアニメーションをスムーズに動かす
+        markers: true, // デバッグ用のマーカーを表示
+      },
+    });
+
+
+    tl
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 4, y: 0})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 5, y: -300})
+
+  // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
   //   container: document.getElementById("lottie-container"), // Lottieの描画先
   //   renderer: "svg", // レンダリング形式
@@ -347,7 +360,7 @@ function Page1() {
         </div>
         <div className="ScrollBigCon">
           <div className="ScrollyCon">
-            <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop />
+            <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop  className={`sc ${omaeFlied ? "omaeFlied" : ""}`}/>
           </div>
           <div className="flyCon">
               <div className="flyImageCon">
