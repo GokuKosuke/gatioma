@@ -115,9 +115,9 @@ function Page1() {
     {
       // opacity: 1,
       scrollTrigger: {
-        trigger: ".flyingOMAE",
-        start: "top 17%",
-        end: "top 17.01%",
+        trigger: ".flyingOMAE > img",
+        start: "top 10.7%",
+        end: "top 10.6%",
         scrub: true,
         duration: 100,
         // markers: true,
@@ -347,14 +347,16 @@ function Page1() {
             <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop />
           </div>
           <div className="flyCon">
-            <div className={`flyingOMAE ${omaeFlied ? "omaeFlied" : ""}`} >
-              <img src="/flyingOMAE.PNG" alt="" />
-              <div className="cliped">
-                <img src="/clipedOmae.png" alt="" />
+              <div className="flyImageCon">
+                <div className={`flyingOMAE ${omaeFlied ? "omaeFlied" : ""}`} >
+                    <img src="/flyingOMAE.PNG" alt="" />
+                </div>
               </div>
-            </div>
           </div>
         </div>
+          <div className={`cliped ${omaeFlied ? "omaeFlied" : ""}`}>
+            <img src="/clipedOmae.png" alt="" />
+          </div>
     </div>
   );
 }
