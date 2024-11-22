@@ -17,6 +17,7 @@ function Page1() {
   const [randomImage, setRandomImage] = useState(null);
   const [menuActive, setMenuActive] = useState(false); // メニューの状態を管理
   const [omaeFlied, setOmaeFlied] = useState(false); // メニューの状態を管理
+  const [kabaoTooth, setkabaotooth] = useState(false); // メニューの状態を管理
 
 
   const scrollToTop = () => {
@@ -251,7 +252,7 @@ function Page1() {
       }
     })
     gsap.fromTo(".environments img:nth-child(4)", {
-      x: -200
+      x: 200
     },
     {
       x:0,
@@ -266,7 +267,7 @@ function Page1() {
       }
     })
     gsap.fromTo(".environments img:nth-child(5)", {
-      x: 800
+      x: -400
     },
     {
       x:0,
@@ -382,7 +383,7 @@ function Page1() {
     },
     {
       x:600,
-      y:-1600,
+      y:-1800,
       // scaleX: -1,
       // width: 1000,
       scrollTrigger: {
@@ -401,12 +402,58 @@ function Page1() {
     },
     {
       x:600,
-      y:-1200,
+      y:-1210,
       opacity: 1,
       scrollTrigger: {
         trigger: ".finalkaba",
         start: "top 0%",
         end: "top 100%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".whiteBack", {
+      x: 0,
+      y: 200,
+
+    },
+    {
+      x:0,
+      y:0,
+      scrollTrigger: {
+        trigger: ".finalkaba",
+        start: "top 20%",
+        end: "top 10%",
+        scrub: 2,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".whiteBack", {
+      y: 0,
+      x:0,
+    },
+    {
+      y: 100,
+      x: -600,
+      scrollTrigger: {
+        trigger: ".whiteCon",
+        start: "top 20%",
+        end: "top -10%",
+        scrub: 1,
+        onEnter: () => {setTimeout(() => setkabaotooth(true), 1000)},
+        onLeaveBack:  () => {setTimeout(() => setkabaotooth(false),1000)},
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".kamahito", {
+      opacity: 0
+    },
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".whiteCon",
+        start: "top -20%",
+        end: "top -10%",
         scrub: 1,
         // markers: true,
       }
@@ -427,7 +474,7 @@ function Page1() {
         start: "top 15%",
         end: "top 0%",
         scrub: 2, // スクロールに合わせてアニメーションをスムーズに動かす
-        markers: true, // デバッグ用のマーカーを表示
+        // markers: true, // デバッグ用のマーカーを表示
       },
     });
 
@@ -497,7 +544,7 @@ function Page1() {
 
   return (
     <div>
-      <div className={`topbar ${clicked ? "PavedTopbar" : ""} ${changePink ? "changedPink" : ""}`}>
+      <div className={`topbar ${clicked ? "PavedTopbar" : ""} ${changePink ? "changedPink" : ""} ${kabaoTooth ? "kabaoTooth" : ""}`}>
         <Image
           src="/fig.png"
           width={70}
@@ -535,9 +582,9 @@ function Page1() {
         <div className='btns'>
           <ul className={`menu ${menuActive ? 'active' : ''}`}>
             <div className="toggle" onClick={toggleMenu}>＋</div>
-            {[...Array(5)].map((_, index) => (
-              <li key={index} style={{ '--i': index }}>
-                <a href="#">
+            {[...Array(5)].map((oiwa, index) => (
+              <li key={index} style={{ '--i': index }} >
+                <a href="https://www.youtube.com/@bunzin">
                   <ChatIcon />
                 </a>
               </li>
@@ -616,15 +663,15 @@ function Page1() {
         </div>
         <div className="bulliedKABAO">
           <div className='bullyingCars'>
-            <img src="/black.png" alt="" />
-            <img src="/white.png" alt="" />
+            <img src="/black.PNG" alt="" />
+            <img src="/white.PNG" alt="" />
           </div>
           <div className="kaba">
             <img src="/kabao/kaba.PNG" alt="" />
             <img src="/kabao/tearLeft.PNG" alt="" />
             <img src="/kabao/tearRight.PNG" alt="" />
           </div>
-          <div className="environments">
+          <div className="environments" id="sese2">
             <img src="/kabao/tree.PNG" alt="" />
             <img src="/kabao/bush.PNG" alt="" />
             <img src="/kabao/bush2.PNG" alt="" />
@@ -639,11 +686,21 @@ function Page1() {
         </div>
         <div className="finalSection">
           <div className="finalkaba">
-            <img src="/kabao/withKaba.PNG" alt="" />
+            <img src="/kabao/hanasi.PNG" alt="" />
             <img src="/kabao/arigato.PNG" alt="" />
-            <div className='whiteBack'></div>
+          <div className="whiteCon">
+            <div className={`whiteBack ${kabaoTooth ? "kabaotooth" : ""}`}>
+            </div>
           </div>
+          </div>
+              <div className="kamahito">
+                <p>
+                  困っている人がいたら助ける。　　　尾前　颯士
+                </p>
+              </div>
         </div>
+
+        <div>ハピバ</div>
     </div>
   );
 }

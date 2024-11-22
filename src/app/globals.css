@@ -11,7 +11,7 @@
 .body {
   background-color: #000000;
   width: 100%;
-  height: 700vh;
+  height: 600vh;
   position: relative;
   top: 0;
 }
@@ -52,7 +52,7 @@
 .texts {
   position: absolute;
   display: flex;
-  top: 290px;
+  top: 0px;
   justify-content: center;
 }
 
@@ -60,6 +60,7 @@
   /* bottom: 200px; */
   position: absolute;
   font-size: 2.5rem;
+  top: 200px;
 }
 
 
@@ -68,6 +69,7 @@
   font-size: 2.5rem;
   right: -100px;
   animation: ten 3s linear infinite;
+  top: 200px;
 }
 
 .tenten1 {
@@ -291,6 +293,10 @@
   .PavedTopbar.topbar {
     animation: pave 8s ease;
     transition: 2s ease;
+  }
+
+  .kabaoTooth.topbar {
+    background-color: white;
   }
 
   @keyframes pave {
@@ -543,6 +549,7 @@
   top: 1000px;
   position: fixed;
   opacity: 0;
+  color: rgba(255, 255, 255, 0.744);
 }
 
 .profileClicked.OmaeProfile {
@@ -560,6 +567,7 @@
 .backArrow {
   color: white;
   font-size: 3.5rem;
+  z-index: 999;
 }
 
 .profileContainer {
@@ -577,7 +585,7 @@
   border-top: 1px solid white;
   border-left: 1px solid white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 70px;
   background-color: #93a1b047;
   backdrop-filter: blur(10px);
 }
@@ -754,6 +762,10 @@
 .color:nth-child(5) {
   background-color: rgb(229, 151, 245);
 }
+.pink {
+  width: 100px;
+  height: 100px !important;
+}
 
 .color:hover {
   transform: scale(1.8);
@@ -764,7 +776,7 @@
 
 .btns {
   /* width: 100%; */
-  z-index: 10;
+  z-index: 12;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -861,14 +873,16 @@
 .tiktokpage {
   visibility: hidden;
   width: 100%;
-  height: 270vh;
+  height: 800vh;
   top: -70%;
   top: 1000px;
+  overflow: hidden;
 }
 
 .activetiktok.tiktokpage {
   background: rgb(255,255,255);
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 20%,black 30%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 20%,black 21%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+  /* background: black; */
   position: absolute;
   z-index: 999;
   overflow: hidden;
@@ -947,7 +961,16 @@
   z-index: 998;
 }
 
-.section1 
+.section1 {
+  overflow: hidden;
+  height: 280vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  /* border: 10px solid red; */
+  overflow: hidden;
+}
 
 .movies {
   /* width: 100%; */
@@ -997,6 +1020,7 @@
   height: 30%;
 }
 
+
 .texts .tikText1 {
   color: white;
   z-index: 700;
@@ -1011,7 +1035,9 @@
   font-family: "Sawarabi Mincho", serif;
   font-weight: 1000;
   font-style: normal;
-  transition: .3s ease
+  transition: .3s ease;
+  position: relative;
+  top: -700px
 }
 
 .tikTextomae1 {
@@ -1037,7 +1063,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 300vh;
   left: 0;
 
 }
@@ -1048,6 +1074,7 @@
   height: 600px;
   position: absolute;
   overflow: hidden;
+  top: 100px;
 }
 
 .omatik img {
@@ -1060,7 +1087,7 @@
 .otokotext {
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   position: absolute;
   top: -700px;
 }
@@ -1082,7 +1109,7 @@
 
 .tiktoklifeCon {
   width: 100%;
-  height: 100vh;
+  height: 300vh;
   justify-content: center;
   display: flex;
   overflow: hidden;
@@ -1095,7 +1122,7 @@
   font-weight: 400;
   font-style: normal;
   position: relative;
-  top: 230px;
+  top: 470px;
   font-size: 4.3rem;
   
 }
@@ -1714,15 +1741,17 @@
 .environments img:nth-child(4) {
   width: 130px;
   height: 150px;
-  top: -320px;
-  z-index: -1;
+  top: -140px;
+  left: -80px;
+  z-index: -2;
+  /* border: 3px solid red; */
 }
 /*cloud*/
 .environments img:nth-child(5) {
   width: 280px;
   height: 200px;
   top: -380px;
-  z-index: -1;
+  z-index: -2;
   animation: cloud 3s ease infinite;
 }
 /*tree2*/
@@ -1832,7 +1861,7 @@
   /* border: 10px solid blue; */
   position: absolute;
   top: 490vh;
-  z-index: 999;
+  z-index: 9;
   overflow: hidden;
 }
 
@@ -1848,26 +1877,159 @@
 
 .finalkaba img:nth-child(1) {
   width: 400px;
-  z-index: 999;
+  z-index: 9;
   left: -400px;
   top: 1700px;
   position: relative;
-  transform: scale(6) rotate(-270deg);
+  transform: scale(3) rotate(-285deg);
 }
 .finalkaba img:nth-child(2) {
-  width: 400px;
-  z-index: 999;
+  width: 340px;
+  z-index: 9;
   left: -700px;
   top: 820px;
   position: relative;
   opacity: 0;
 }
 
-.whiteBack {
-  background-color: white;
+.whiteCon {
   width: 400px;
-  height: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.whiteBack {
+  background-color: rgb(255, 255, 255);
+  width: 20px;
+  height: 20px;
   position: relative;
   z-index: 999;
-  left: -500px;
+  top: -140px;
+  left: 110px;
+  transform: rotate(-20deg);
+  border-radius: 5px;
+  transition: .5s ease;
 }
+
+.kabaotooth.whiteBack {
+  width: 2000px;
+  height: 4000px;
+  transform: rotate(0deg);
+  position: absolute;
+}
+
+.kamahito {
+  /* background-color: red; */
+  z-index: 999;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 1200px;
+  display: flex;
+  align-items: center;
+  border: 1px black solid;
+  justify-content: center;
+  opacity: 0;
+}
+
+.kamahito p {
+  font-size: 1.3rem;
+}
+
+.piBack {
+  background-color: #CB5850;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  z-index: 999;
+  top: 24vh;
+  left: 90px;
+}
+
+
+.CONCON {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 600px;
+}
+
+.card {
+  height: 100%;
+  width: 400px;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  z-index: 999;
+}
+
+.container:hover > .card{
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 400px;
+  border-radius: 3rem;
+  position: absolute;
+  box-shadow: 0 0 5px 2px #853d892f;
+  backface-visibility: hidden;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+  backdrop-filter: blur(20px);
+}
+
+.front {
+  background-color: rgba(175, 197, 233, 0.583)
+}
+
+.back {
+  background-image: url(/omaegekidasa.JPG);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.content {
+  padding: 60px;
+}
+
+.content h1 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.backcir {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(226, 237, 249);
+  border-radius: 50%;
+  position: absolute;
+  top: -200px;
+  right: -200px;
+}
+.backcir2 {
+  width: 700px;
+  height: 600px;
+  background-color: rgb(226, 237, 249);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -200px;
+  left: -200px;
+  z-index: 999;
+}
+

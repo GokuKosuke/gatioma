@@ -11,6 +11,7 @@ import Settings from "./Settings";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons'; // Ensure this import is correct
 import TikTok from "./TikTok";
+import ArticleIcon from '@mui/icons-material/Article';
 
 function Bar({ children }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -54,8 +55,8 @@ function Bar({ children }) {
   const links = [
     { label: "Profile", href: "#", icon: <PersonIcon />, onClick: handleClickProfile },
     { label: "TikTok活動", href: "#", icon: <FontAwesomeIcon icon={faTiktok} />, onClick: handleClickTikTok }, // Make sure this is correct
-    { label: "Section2", href: "#" },
-    { label: "Section3", href: "#", icon: <HomeIcon sx={{ fontSize: 26 }} /> },
+    { label: "Main Channel", href: "https://www.youtube.com/@HikakinTV", icon: <ArticleIcon /> },
+    { label: "Second Channel", href: "https://www.youtube.com/@HIKAKIN", icon: <ArticleIcon /> },
     { label: "Settings", href: "#", icon: <SettingsIcon />, onClick: handleClickSettings },
   ];
 

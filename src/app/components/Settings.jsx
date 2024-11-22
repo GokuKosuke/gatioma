@@ -19,9 +19,9 @@ function Settings({ settingsClicked, setSettingsClicked, clickedColor, setClicke
   const links = [
     { label: "Color", href: "#", onClick: handleColor, className: `colorText ${clickedColor ? "clickedColor" : ""}` },
     { label: "Policy", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
-    { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
-    { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
-    { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` }
+    // { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
+    // { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` },
+    // { label: "Color", href: "#", className: `colorText2 ${clickedColor ? "clickedColor" : ""}` }
   ];
 
   return (
@@ -51,7 +51,7 @@ function Settings({ settingsClicked, setSettingsClicked, clickedColor, setClicke
           <div className={`blue color ${clickedColor ? "clickedColor" : ""}`}></div>
           <div className={`yellow color ${clickedColor ? "clickedColor" : ""}`}></div>
           <div className={`green color ${clickedColor ? "clickedColor" : ""}`}></div>
-          <div className={`pink color ${clickedColor ? "clickedColor" : ""}`}></div>
+          {/* <div className={`pink color ${clickedColor ? "clickedColor" : ""}`}></div> */}
         </div>
       </div>
     </div>
