@@ -201,16 +201,20 @@ function Page1() {
       scrollTrigger: {
         trigger: ".omaeFlied.flyingOMAE", // スクロールのトリガーとなる要素
         start: "top 0.7%",
-        end: "top 0.6%",
-        scrub: 1, // スクロールに合わせてアニメーションをスムーズに動かす
+        end: "top -50%",
+        scrub: 2, // スクロールに合わせてアニメーションをスムーズに動かす
         markers: true, // デバッグ用のマーカーを表示
       },
     });
 
 
     tl
-    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 4, y: 0})
-    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 5, y: -300})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 4, y: 0, rotate: 0})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 10, y: -500, rotate: 0})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 14, x: 500, rotate: -140})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 300, y:900, x: -1000,delay:2})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 330, y:900, x: 1000,rotate:-50,delay:4})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 400, y:-300, x: -1000,delay:5})
 
   // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
@@ -359,8 +363,8 @@ function Page1() {
             </div>
         </div>
         <div className="ScrollBigCon">
-          <div className="ScrollyCon">
-            <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop  className={`sc ${omaeFlied ? "omaeFlied" : ""}`}/>
+          <div  className={`ScrollyCon ${omaeFlied ? "omaeFlied" : ""}`}>
+            <ScrollyVideo src="/omaecanfly4.mp4" muted autoPlay playsInline loop />
           </div>
           <div className="flyCon">
               <div className="flyImageCon">
