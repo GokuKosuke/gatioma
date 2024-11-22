@@ -17,6 +17,8 @@ function Page1() {
   const [menuActive, setMenuActive] = useState(false); // メニューの状態を管理
   const [omaeFlied, setOmaeFlied] = useState(false); // メニューの状態を管理
 
+  const tl = gsap.timeline();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -71,7 +73,7 @@ function Page1() {
         trigger: ".heartsOmae",
         start: "top 60%",
         end: "top 55%",
-        scrub: 2,
+        scrub: 1,
         // markers: true,
       }
     })
@@ -90,7 +92,7 @@ function Page1() {
         trigger: ".heartsOmae",
         start: "top 60%",
         end: "top 55%",
-        scrub: 2,
+        scrub: 1,
         // markers: true,
       }
     })
@@ -134,7 +136,7 @@ function Page1() {
         trigger: ".SImages1",
         start: "top 100%",
         end: "top -10%",
-        scrub: true,
+        scrub: 1,
         markers: true,
       }
     })
@@ -147,7 +149,7 @@ function Page1() {
         trigger: ".SImages2",
         start: "top 100%",
         end: "top -10%",
-        scrub: true,
+        scrub: 1,
         markers: true,
       }
     })
@@ -160,7 +162,7 @@ function Page1() {
         trigger: ".SImages3",
         start: "top 100%",
         end: "top -10%",
-        scrub: true,
+        scrub: 1,
         markers: true,
       }
     })
@@ -174,7 +176,7 @@ function Page1() {
         trigger: ".scrollTexts1",
         start: "top 100%",
         end: "top -10%",
-        scrub: true,
+        scrub: 1,
         markers: true,
       }
     })
@@ -188,11 +190,15 @@ function Page1() {
         trigger: ".scrollTexts2",
         start: "top 100%",
         end: "top -10%",
-        scrub: true,
+        scrub: 1,
         markers: true,
       }
     })
     
+
+    // tl
+    // .to(".", {duration: 1, x: 100, y: -300})
+    // .to()
 
   // // Lottieアニメーションの初期化
   // const animation = Lottie.loadAnimation({
@@ -355,7 +361,7 @@ function Page1() {
           </div>
         </div>
           <div className={`cliped ${omaeFlied ? "omaeFlied" : ""}`}>
-            <img src="/clipedOmae.png" alt="" />
+            <img src="/clipedOmae.PNG" alt="" />
           </div>
     </div>
   );
