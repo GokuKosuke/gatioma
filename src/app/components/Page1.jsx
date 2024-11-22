@@ -138,7 +138,7 @@ function Page1() {
         start: "top 100%",
         end: "top -10%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
     gsap.fromTo(".SImages2", {
@@ -151,7 +151,7 @@ function Page1() {
         start: "top 100%",
         end: "top -10%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
     gsap.fromTo(".SImages3", {
@@ -164,7 +164,7 @@ function Page1() {
         start: "top 100%",
         end: "top -10%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
     
@@ -178,7 +178,7 @@ function Page1() {
         start: "top 100%",
         end: "top -10%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       }
     })
     
@@ -192,10 +192,108 @@ function Page1() {
         start: "top 10%",
         end: "top -110%",
         scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".bulliedKABAO", {
+      opacity: 0
+    },
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 80%",
+        end: "top 100%",
+        scrub: 1,
+        // markers: true,
+      }
+    })
+    gsap.fromTo(".environments img:nth-child(1)", {
+      x: -200
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 50%",
+        end: "top 60%",
+        scrub: 1,
         markers: true,
       }
     })
 
+
+    gsap.fromTo(".environments img:nth-child(2)", {
+      x: 200
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 55%",
+        end: "top 65%",
+        scrub: 1,
+        markers: true,
+      }
+    })
+
+    gsap.fromTo(".environments img:nth-child(3)", {
+      x: -200
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 55%",
+        end: "top 65%",
+        scrub: 1,
+        markers: true,
+      }
+    })
+    gsap.fromTo(".environments img:nth-child(4)", {
+      x: -200
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 47%",
+        end: "top 60%",
+        scrub: 1,
+        duration: 2000,
+        delay: 300,
+        markers: true,
+      }
+    })
+    gsap.fromTo(".environments img:nth-child(5)", {
+      x: 800
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 47%",
+        end: "top 60%",
+        scrub: 1,
+        duration: 2000,
+        delay: 300,
+        markers: true,
+      }
+    })
+
+    gsap.fromTo(".environments img:nth-child(6)", {
+      x: 200
+    },
+    {
+      x:0,
+      scrollTrigger: {
+        trigger: ".bulliedKABAO",
+        start: "top 50%",
+        end: "top 60%",
+        scrub: 1,
+        markers: true,
+      }
+    })
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -213,7 +311,7 @@ function Page1() {
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 10, y: -500, rotate: 0})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 14, x: 500, rotate: -140})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 300, y:900, x: -1000,delay:2})
-    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 330, y:900, x: 1000,rotate:-50,delay:4})
+    .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 340, y:1500, x: 1000,rotate:-50,delay:6})
     .to(".omaeFlied.flyingOMAE > img:nth-child(1)", {duration: 400, y:-300, x: -1000,delay:5})
 
   // Lottieアニメーションの初期化
@@ -379,6 +477,34 @@ function Page1() {
               <img src="/clipedOmae.PNG" alt="" />
             </div>
           </div> */}
+        </div>
+        <div className="bulliedKABAO">
+          <div className='bullyingCars'>
+            <img src="/black.png" alt="" />
+            <img src="/white.png" alt="" />
+          </div>
+          <div className="kaba">
+            <img src="/kabao/kaba.PNG" alt="" />
+            <img src="/kabao/tearLeft.PNG" alt="" />
+            <img src="/kabao/tearRight.PNG" alt="" />
+          </div>
+          <div className="environments">
+            <img src="/kabao/tree.PNG" alt="" />
+            <img src="/kabao/bush.PNG" alt="" />
+            <img src="/kabao/bush2.PNG" alt="" />
+            <img src="/kabao/cloud.PNG" alt="" />
+            <img src="/kabao/cloud.PNG" alt="" />
+            <img src="/kabao/tree.PNG" alt="" />
+            <img src="/kabao/grou.PNG" alt="" />
+            <img src="/kabao/kabi.PNG" alt="" />
+          </div>
+        </div>
+
+        <div className='omaeKabao'>
+          <div className="withkabaCon">
+            <img src="/kabao/Withkaba.PNG" alt="" />
+          </div>
+            
         </div>
     </div>
   );
