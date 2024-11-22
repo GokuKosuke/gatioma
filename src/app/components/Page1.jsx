@@ -356,13 +356,16 @@ function Page1() {
               <div className="flyImageCon">
                 <div className={`flyingOMAE ${omaeFlied ? "omaeFlied" : ""}`} >
                     <img src="/flyingOMAE.PNG" alt="" />
+                    <img src="/clipedOmae.PNG" alt="" />
                 </div>
               </div>
           </div>
+          {/* <div className="clipedCon">
+            <div className={`cliped ${omaeFlied ? "omaeFlied" : ""}`}>
+              <img src="/clipedOmae.PNG" alt="" />
+            </div>
+          </div> */}
         </div>
-          <div className={`cliped ${omaeFlied ? "omaeFlied" : ""}`}>
-            <img src="/clipedOmae.PNG" alt="" />
-          </div>
     </div>
   );
 }
